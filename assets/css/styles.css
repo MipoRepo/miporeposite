@@ -1,0 +1,163 @@
+/* ===== GOOGLE FONTIT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* ===== MUUTTUJAT ===== */
+:root {
+    --gradient-start: #d6249f;
+    --gradient-mid: #fd5949;
+    --gradient-end: #fdf497;
+    --text-color: #FEFAEE;
+    --bg-color: #171717;
+    --nav-bg: #171717;
+    --font-primary: 'Roboto', sans-serif;
+    --border-color: #ffffff;
+}
+
+/* ===== PERUSTYYLIT ===== */
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* ===== NAVIGAATIO ===== */
+nav {
+    background: var(--nav-bg) !important;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav a {
+    color: var(--text-color) !important;
+    text-decoration: none;
+    font-size: 0.7rem;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== HERO-OSIO ===== */
+.hero {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero h1 {
+    margin: 40px auto;
+    padding: 10px;
+    font-size: 2.8rem;
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-mid));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.4;
+}
+
+/* ===== KIELIVALITSIN ===== */
+.language-switcher {
+    display: flex;
+    color: var(--text-color) !important;
+    text-decoration: none;
+    font-size: 0.7rem;
+    transition: all 0.3s;
+    gap: 15px;
+    align-items: center;
+}
+
+.flag-icon {
+    width: 32px;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+.lang-icon.active .flag-icon {
+    border-color: var(--gradient-mid);
+    box-shadow: 0 0 12px rgba(39, 38, 38, 0.4);
+}
+
+.lang-icon:hover .flag-icon {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+/* ===== MOBIILIVALIKKO ===== */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* ===== RESPONSIIVISUUS ===== */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        padding: 15px 25px;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6rem;
+        padding: 10px 20px;
+        border-width: 2px;
+    }
+}
+
+/* ===== FONT AWESOME (HAMBURGER-ICON) ===== */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');

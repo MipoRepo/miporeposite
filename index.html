@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" id="html-tag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back "End" Country</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Mobiilivalikko -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="main-nav">
+                <li><a href="#about" data-key="about">About Me</a></li>
+                <li><a href="#portfolio" data-key="portfolio">Portfolio</a></li> <!-- Muuta työkokemus..?, mieti muutenkin nää uudestaan! -->
+                <li><a href="#skills" data-key="skills">Skills</a></li>
+                <li><a href="#studies" data-key="studies">Studies</a></li>
+                <li><a href="#contact" data-key="contact">Contact</a></li>
+            </ul>
+
+            <!-- Kielivalitsin -->
+            <div class="language-switcher">
+                <a href="#" class="lang-icon" data-lang="fi">
+                    <img src="assets\flags\fi.png" alt="Suomi" class="flag-icon">
+                </a>
+                <a href="#" class="lang-icon" data-lang="en">
+                    <img src="assets\flags\eng.png" alt="English" class="flag-icon">
+                </a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <img src="assets/images/header.png" alt="Maisemakuva" class="header-image">
+            <h1 data-key="heroTitle"></h1>
+        </div>
+    </header>
+
+    <!-- Script -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
