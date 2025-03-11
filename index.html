@@ -48,17 +48,19 @@
     width: 1000px;
     height: 850px;
     overflow-y: auto; /* Sisäistä vieritystä */
-    margin: 40px auto; /* Keskittää vaakasuunnassa, antaa ylä- ja alatilaa */
+    margin: 40px auto; /* Keskittää vaakasuunnassa */
     border: 1px solid rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Laittaa sisällön pystysuoraan */
+    align-items: center; /* Keskittää sisällön vaakasuunnassa */
+    padding: 10px;
 ">
 
-        <p style="text-align: center; font-size: 18px; margin-bottom: 20px;">
-            This page's UX was designed in Figma — feel free to explore it below. The final pages will be ready soon.
+    <p style="text-align: center; font-size: 18px; margin-bottom: 20px;">
+        This page's UX was designed in Figma — feel free to explore it below. The final pages will be ready soon.
     </p>
-        <iframe 
+
+    <iframe 
         style="border: none;" 
         width="1000" 
         height="850" 
@@ -67,6 +69,7 @@
     </iframe>
 
 </div>
+
 
 
 
