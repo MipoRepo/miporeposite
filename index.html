@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Back "End" Country</title>
+    <title>Back"End"Country</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -18,11 +16,11 @@
             </button>
             
             <ul class="main-nav">
-                <li><a href="#about" data-key="about">About Me</a></li>
-                <li><a href="#skills" data-key="skills">Skills</a></li>
-                <li><a href="#studies" data-key="studies">Studies</a></li>
-                <li><a href="#portfolio" data-key="portfolio">Work experience</a></li> <!-- Muuta työkokemus..?, mieti muutenkin nää uudestaan! -->
-                <li><a href="#contact" data-key="contact">Contact</a></li>
+                <li><a href="#about" data-key="about">ABOUT ME</a></li>
+                <li><a href="#skills" data-key="skills">SKILSS</a></li>
+                <li><a href="#studies" data-key="studies">STUDIES</a></li>
+                <li><a href="#portfolio" data-key="portfolio">WORK EXPERIENCE</a></li> <!-- Muuta työkokemus..?, mieti muutenkin nää uudestaan! -->
+                <li><a href="#contact" data-key="contact">CONTACT</a></li>
             </ul>
 
             <!-- Kielivalitsin -->
@@ -38,53 +36,28 @@
 
         <div class="hero">
             <img src="assets/images/header.png" alt="Maisemakuva" class="header-image">
-            <h1 data-key="heroTitle"></h1>
+            <h1 class="title">BACK  "END"  COUNTRY<br>WILL  ALWAYS  BE<br>MY HOME</h1>
         </div>
-        
-        <div class"hero h1>
-        <h1></h1>
-        </div>
-    </header>    <div></div>
-       
-    
+    </header>        
+
+<!-- VÄLIAIKAISET -->
 <!-- Teksti iframen yläpuolelle, väliaikaiset tekstit kunnes sivut valmis -->
-<div style="width: 100%; text-align: center; margin-top: 20px;">
-    <a href="https://github.com/MipoRepo" target="_blank">My GitHub profile</a>
-</div>
-      
-<h3 style="text-align: center; margin: 40px auto 20px; width: 1000px;">
-    This page's UI was designed in Figma — feel free to explore it below. The final pages will be ready soon. </h3> 
 
-<!-- Keskitetty iframe laatikko -->
-<div style="
-    width: 1000px;
-    height: 850px;
-    overflow-y: auto; /* Sisäistä vieritystä */
-    margin: 0 auto; /* Keskittää vaakasuunnassa */
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-">
 
-    <iframe 
-        style="border: none;" 
-        width="1000" 
-        height="850" 
-        src="https://embed.figma.com/design/3nZHCrdoXOdpLkblWuK1Sk/%80MipoRepo?node-id=1-25&embed-host=share" 
-        allowfullscreen>
+
+
+<!-- Figma iframe laatikko -->
+<div class="figma-container">
+    <iframe src="https://embed.figma.com/design/3nZHCrdoXOdpLkblWuK1Sk/%80MipoRepo?node-id=1-25&embed-host=share" 
+            allowfullscreen>
     </iframe>
-
 </div>
-
-
-
-
-
-
-
-
-
+<div class="temp-content">
+    <!-- <a href="https://github.com/MipoRepo" target="_blank">My GitHub profile</a> -->
+    <br>
+    <p>This page's UI was designed in Figma — feel free to explore it.</p>
+    <p>The final pages will be ready soon.</p>
+</div>
     <!-- Script -->
     <script src="assets/js/script.js"></script>
 </body>

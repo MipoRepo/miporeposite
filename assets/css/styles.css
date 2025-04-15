@@ -1,17 +1,38 @@
 /* ===== GOOGLE FONTIT ===== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Expanded+One&display=swap');
 
 /* ===== MUUTTUJAT ===== */
 :root {
-    --gradient-start: #d6249f;
-    --gradient-mid: #fd5949;
-    --gradient-end: #fdf497;
-    --text-color: #FEFAEE;
+    --gradient-end: #171717;
+    --gradient-mid-3: #9c356d;
+    --gradient-mid-2: #f9784c;
+    --gradient-mid-1: #fcd65b;
+    --gradient-start: #fffaef;
+    --text-color: #FEFA; /* korjaa, figmasta oikea väri */
     --bg-color: #171717;
+    --bg-color2: #fffaef;
     --nav-bg: #171717;
-    --font-primary: 'Roboto', sans-serif;
+    --font-primary: 'Inter', 'Roboto', sans-serif;
     --border-color: #ffffff;
 }
+
+
+/* 
+.special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+ */
 
 /* ===== PERUSTYYLIT ===== */
 body {
@@ -24,10 +45,10 @@ body {
 /* ===== NAVIGAATIO ===== */
 nav {
     background: var(--nav-bg) !important;
-    padding: 15px 20px;
+    padding: 0.94rem 1.25rem;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* tarkasta tarpeellisuus ja arvo*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +56,7 @@ nav {
 
 .main-nav {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -46,8 +67,8 @@ nav {
     text-decoration: none;
     font-size: 0.7rem;
     transition: all 0.3s;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 0.31rem 0.63rem;
+    border-radius: 0.31rem;
 }
 
 .main-nav a:hover {
@@ -62,25 +83,58 @@ nav {
 }
 
 .hero img {
+    position: relative;
+    z-index: 3 !important; 
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
 }
 
-.hero h1 {
-    margin: 40px auto;
-    padding: 10px;
-    font-size: 2.8rem;
-    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-mid));
+.title {
+    position: relative; /* For gradient-bar funktion*/
+    z-index: 2 !important; /* Varmistaa että teksti on gradientin päällä */
+    width: 100%;
+    padding-top: 1rem;
+    font-family: 'Special Gothic Expanded One', sans-serif;
+    font-weight: 200;
+    text-align: left;
+    line-height: 1.4;
+    margin: 0rem; /* For gradient-bar funktion*/
+    padding-left: 6rem;
+    font-size: 3.6rem;
+    background: linear-gradient(35deg, 
+        var(--gradient-start), 
+        var(--gradient-mid-1), 
+        var(--gradient-mid-2), 
+        var(--gradient-mid-3), 
+        var(--gradient-end)
+        );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     display: inline-block;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    line-height: 1.4;
-}
+    /* text-shadow: 0.13rem 0.13rem rgba(0, 0, 0, 0.3); */ 
+    }
+
+.hero::before {
+    z-index: 1 !important; /* Asetetaan taustalle tekstin alle */content: '';
+    position: absolute;
+    height: 70rem       ;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+        
+    background: linear-gradient(
+        355deg, 
+        var(--gradient-start) 20%, 
+        var(--gradient-mid-1), 
+        var(--gradient-mid-2), 
+        var(--gradient-mid-3), 
+        var(--gradient-end) 40%);
+        
+    }
 
 /* ===== KIELIVALITSIN ===== */
 .language-switcher {
@@ -89,21 +143,21 @@ nav {
     text-decoration: none;
     font-size: 0.7rem;
     transition: all 0.3s;
-    gap: 15px;
+    gap: 1rem;
     align-items: center;
 }
 
 .flag-icon {
-    width: 32px;
+    width: 2rem;
     height: 100%;
-    border: 1px solid transparent;
-    border-radius: 1px;
+    border: 0.06rem solid transparent;
+    border-radius: 0.06rem;
     transition: all 0.3s ease;
 }
 
 .lang-icon.active .flag-icon {
     border-color: var(--gradient-mid);
-    box-shadow: 0 0 12px rgba(39, 38, 38, 0.4);
+    box-shadow: 0 0 0.75rem rgba(39, 38, 38, 0.4);
 }
 
 .lang-icon:hover .flag-icon {
@@ -119,7 +173,7 @@ nav {
     color: var(--text-color);
     font-size: 1.8rem;
     cursor: pointer;
-    padding: 5px;
+    padding: 0.3rem;
 }
 
 /* ===== RESPONSIIVISUUS ===== */
@@ -132,8 +186,8 @@ nav {
         right: 0;
         background: var(--nav-bg);
         flex-direction: column;
-        padding: 20px 0;
-        gap: 15px;
+        padding: 1.25rem 0;
+        gap: 0.94rem;
     }
 
     .main-nav.active {
@@ -146,18 +200,40 @@ nav {
 
     .hero h1 {
         font-size: 2rem;
-        padding: 15px 25px;
-        margin: 30px auto;
+        padding: 0.94rem 1.56rem;
+        margin: 1.88 auto;
     }
 }
-
+/*
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.6rem;
-        padding: 10px 20px;
-        border-width: 2px;
+        padding: 0.63rem 1.25rem;
+        border-width: 0.13rem;
     }
 }
+*/
+.temp-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    background: rgba(0,0,0,0.5); /* Lisätty tausta parempaan näkyvyyteen */
+}
 
-/* ===== FONT AWESOME (HAMBURGER-ICON) ===== */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+.figma-container {
+    width: 100%;
+    height: 300vh;
+    position: relative;
+    margin-top: 30%;
+}
+
+.figma-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
