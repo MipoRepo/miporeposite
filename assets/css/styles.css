@@ -92,8 +92,8 @@ nav {
 }
 
 .title {
-    position: relative; /* For gradient-bar funktion*/
-    z-index: 2 !important; /* Varmistaa että teksti on gradientin päällä */
+    position: relative; /*gradient-bar*/
+    z-index: 2; /* Varmistaa että teksti on gradientin päällä */
     width: 100%;
     padding-top: 1rem;
     font-family: 'Special Gothic Expanded One', sans-serif;
