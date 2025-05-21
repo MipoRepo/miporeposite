@@ -33,7 +33,10 @@
 }
 
  */
-
+/* ===== Hover-efekti: muuta filttereitä =====  */
+.image-filter:hover {
+    filter: hue-rotate(180deg) brightness(0.8) contrast(2);
+}
 /* ===== PERUSTYYLIT ===== */
 body {
     margin: 0;
