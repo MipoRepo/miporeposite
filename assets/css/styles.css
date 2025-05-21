@@ -39,11 +39,11 @@
 
 @keyframes color-pulse {
   0%, 100% { filter: none; }
-  50% { filter: hue-rotate(180deg) brightness(0.8) contrast(1); }
+  50% { filter: brightness(0.9) contrast(1); }
 }
 
 .image-filter {
-  animation: color-pulse 0.8s ease-in-out;
+  animation: color-pulse 1.2s ease-in-out;
 }
 
 /* Hover-tilassa jatkuva animaatio */
