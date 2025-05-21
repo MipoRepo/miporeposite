@@ -33,10 +33,20 @@
 }
 
  */
-/* ===== Hover-efekti: muuta filttereitä =====  */
+/* ===== Hover-efekti: HERO =====  */
+/* Automaattinen lyhyt animaatio (0.6s) */
+@keyframes color-pulse {
+  0%, 100% { filter: none; }
+  50% { filter: hue-rotate(180deg) brightness(0.8) contrast(2); }
+}
+
+.image-filter {
+  animation: color-pulse 0.6s ease-in-out;
+}
+
+/* Hover-tilassa jatkuva animaatio */
 .image-filter:hover {
-    filter: hue-rotate(2deg) brightness(1.2) contrast(1);
-    transition: filter 0.3s ease;
+  animation: color-pulse 1.2s infinite ease-in-out;
 }
 
 /* ===== PERUSTYYLIT ===== */
