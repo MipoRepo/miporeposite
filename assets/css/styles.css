@@ -94,9 +94,15 @@ nav {
 
 /* ===== HERO-OSIO ===== */
 .hero {
-    position: relative;
-    width: 100%;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* koko näkymän korkeus */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* pystykeskitys */
+  align-items: center;     /* vaakakeskitys */
+  text-align: center;
+  overflow: hidden;
 }
 
 .hero img {
@@ -254,6 +260,7 @@ nav {
     height: 100%;
     border: none;
 }
+
 
 
 
