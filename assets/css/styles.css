@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== GOOGLE FONTIT ===== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Expanded+One&display=swap');
@@ -22,6 +36,22 @@
 }
 
 
+/* 
+.special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+ */
+
 /* ===== Hover-efekti: HERO =====  */
 /* Automaattinen lyhyt animaatio (0.6s) */
 
@@ -40,16 +70,11 @@
 }
 
 /* ===== PERUSTYYLIT ===== */
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: var(--font-primary);
     color: var(--text-color);
     background-color: var(--bg-color);
-    overflow-x: hidden;
 }
 
 /* ===== NAVIGAATIO ===== */
@@ -62,7 +87,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .main-nav {
@@ -74,7 +98,7 @@ nav {
 }
 
 .main-nav a {
-    color: var(--text-color);
+    color: var(--text-color) !important;
     text-decoration: none;
     font-size: 0.7rem;
     transition: all 0.3s;
@@ -95,30 +119,31 @@ nav {
   flex-direction: column;
   justify-content: center; /* pystykeskitys */
   align-items: center;     /* vaakakeskitys */
-  text-align: left;
+  text-align: center;
   overflow: hidden;
 }
 
 .hero img {
     position: relative;
-    z-index: 3; 
+    z-index: 3 !important; 
     width: 100%;
-    height: auto; /*tai 100% */
-    /* display: block; */
+    height: auto;
+    display: block;
     object-fit: cover;
 }
 
 .title {
-    position: absolute; /*alunperin relative, gradient-bar*/
-    z-index: 4; /* Varmistaa että teksti on gradientin päällä */
+    position: relative; /*gradient-bar*/
+    z-index: 2; /* Varmistaa että teksti on gradientin päällä */
     width: 100%;
-    padding: 1rem 0 1rem 10rem;
-    font-family: 'Anton', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-align: left;
+    padding-top: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-align: center;
     line-height: 1.4;
-    margin: 0; /* For gradient-bar funktion*/
+    margin: 0rem; /* For gradient-bar funktion*/
+    padding-left: 10rem;
     font-size: 6.0rem;
     background: linear-gradient(35deg, 
         var(--gradient-start), 
@@ -131,13 +156,12 @@ nav {
     background-clip: text;
     color: transparent;
     display: inline-block;
-}
+    padding-bottom: 10rem;
+    /* text-shadow: 0.13rem 0.13rem rgba(0, 0, 0, 0.3); */ 
+    }
 
 .hero::before {
-    content: '';
-    height: 100%;
-    width: 100%;
-    z-index: 1 !important; /* Asetetaan taustalle tekstin alle */
+    z-index: 1 !important; /* Asetetaan taustalle tekstin alle */content: '';
     position: absolute;
     height: 70rem       ;
     top: 0;
@@ -152,7 +176,8 @@ nav {
         var(--gradient-mid-2), 
         var(--gradient-mid-3), 
         var(--gradient-end) 40%);
-}
+        
+    }
 
 /* ===== KIELIVALITSIN ===== */
 .language-switcher {
@@ -195,10 +220,66 @@ nav {
 }
 
 /* ===== RESPONSIIVISUUS ===== */
- text-decoration: bold;
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        flex-direction: column;
+        padding: 1.25rem 0;
+        gap: 0.94rem;
+    }
 
+    .main-nav.active {
+        display: flex;
+    }
 
+    .mobile-menu-btn {
+        display: block;
+    }
 
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0.94rem 1.56rem;
+        margin: 1.88 auto;
+    }
+}
+/*
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6rem;
+        padding: 0.63rem 1.25rem;
+        border-width: 0.13rem;
+    }
+}
+*/
+.temp-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    background: rgba(0,0,0,0.5); /* Lisätty tausta parempaan näkyvyyteen */
+}
+
+.figma-container {
+    width: 100%;
+    height: 300vh;
+    position: relative;
+    margin-top: 30%;
+}
+
+.figma-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 
 
