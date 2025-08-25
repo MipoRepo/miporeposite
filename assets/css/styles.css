@@ -43,7 +43,7 @@
 }
 
 .image-filter {
-  animation: color-pulse 6.0s ease-in-out;
+  animation: color-pulse 6.0s infinite ease-in-out;
 }
 
 /* Hover-tilassa jatkuva animaatio */
@@ -254,5 +254,6 @@ nav {
     height: 100%;
     border: none;
 }
+
 
 
