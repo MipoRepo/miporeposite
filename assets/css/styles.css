@@ -39,16 +39,16 @@
 
 @keyframes color-pulse {
   0%, 100% { filter: none; }
-  50% { filter: brightness(0.9) contrast(1); }
+  30% { filter: brightness(0.9) contrast(1); }
 }
 
 .image-filter {
-  animation: color-pulse 2.0s ease-in-out;
+  animation: color-pulse 6.0s ease-in-out;
 }
 
 /* Hover-tilassa jatkuva animaatio */
 .image-filter:hover {
-  animation: color-pulse 2.0s infinite ease-in-out;
+  animation: color-pulse 6.0s infinite ease-in-out;
 }
 
 /* ===== PERUSTYYLIT ===== */
@@ -254,4 +254,5 @@ nav {
     height: 100%;
     border: none;
 }
+
 
