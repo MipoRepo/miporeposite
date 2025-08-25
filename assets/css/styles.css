@@ -43,12 +43,12 @@
 }
 
 .image-filter {
-  animation: color-pulse 1.2s ease-in-out;
+  animation: color-pulse 2.0s ease-in-out;
 }
 
 /* Hover-tilassa jatkuva animaatio */
 .image-filter:hover {
-  animation: color-pulse 1.2s infinite ease-in-out;
+  animation: color-pulse 2.0s infinite ease-in-out;
 }
 
 /* ===== PERUSTYYLIT ===== */
@@ -254,3 +254,4 @@ nav {
     height: 100%;
     border: none;
 }
+
