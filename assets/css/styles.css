@@ -1,6 +1,10 @@
 /* ===== GOOGLE FONTIT ===== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 
 /* ===== MUUTTUJAT ===== */
 :root {
@@ -119,7 +123,7 @@ nav {
     z-index: 2; /* Varmistaa että teksti on gradientin päällä */
     width: 100%;
     padding-top: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     text-align: left;
     line-height: 1.4;
@@ -260,6 +264,7 @@ nav {
     height: 100%;
     border: none;
 }
+
 
 
 
