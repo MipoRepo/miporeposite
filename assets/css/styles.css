@@ -142,6 +142,7 @@ nav {
     background-clip: text;
     color: transparent;
     display: inline-block;
+    padding-bottom: 10rem;
     /* text-shadow: 0.13rem 0.13rem rgba(0, 0, 0, 0.3); */ 
     }
 
@@ -265,6 +266,7 @@ nav {
     height: 100%;
     border: none;
 }
+
 
 
 
