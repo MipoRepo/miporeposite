@@ -34,6 +34,13 @@ nav .container {
     align-items: center;
 }
 
+.logo-wrapper {
+    position: fixed; /* pysyy näytöllä scrollattaessa */
+    top: 0;
+    left: 20px; /* sama kuin navin alkuperäinen padding */
+    z-index: 1100;
+}
+
 .logo {
     color: #ecb02ebb;
     font-size: 1.5rem;
