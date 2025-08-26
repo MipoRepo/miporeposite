@@ -1,69 +1,306 @@
 <!DOCTYPE html>
-<html lang="en" id="html-tag">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Back"End"Country</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="assets/favicon.ico">
-    <meta name="description" content="Portfolio site for Mikko – backend developer from the backend countryside.">
+    <title>Mikko Pohjola - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Valikko -->
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <ul class="main-nav">
-                <li><a href="#about" data-key="about">ABOUT ME</a></li>
-                <li><a href="#skills" data-key="skills">SKILLS</a></li>
-                <li><a href="#studies" data-key="studies">STUDIES</a></li>
-                <li><a href="#portfolio" data-key="portfolio">WORK EXPERIENCE</a></li> <!-- Muuta työkokemus..?, mieti muutenkin nää uudestaan! -->
-                <li><a href="#contact" data-key="contact">CONTACT</a></li>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">@Miporepo</div>
+            <ul class="nav-links">
+                <li><a href="#about">About me</a></li>
+                <li><a href="#focus">My Focus</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#studies">Studies</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <!-- Kielivalitsin -->
-            <div class="language-switcher">
-                <a href="#" class="lang-icon" data-lang="fi">
-                    <img src="assets/flags/fi.png" alt="Suomi" class="flag-icon">
-                </a>
-                <a href="#" class="lang-icon" data-lang="en">
-                    <img src="assets/flags/eng.png" alt="English" class="flag-icon">
-                </a>
-            </div>
-        </nav>
-
-        <div class="hero">
-            <img src="assets/images/header.png" alt="Panoramic landscape of countryside" class="header-image image-filter">
-            <h1 class="title">BACK  "END"  COUNTRY<br>WILL  ALWAYS  BE MY HOME</h1>
-            <!-- <p class="title" style="font-size: 0.8rem;">pure|CSS</p> -->
         </div>
-    </header>        
+    </nav>
 
-<!-- VÄLIAIKAISET -->
-<!-- Teksti iframen yläpuolelle, väliaikaiset tekstit kunnes sivut valmis -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- <div class="hero-subtitle">👋 Hey, I am MIKKO</div> -->
+            <h1>BACK "END" COUNTRY<br>WILL ALWAYS BE<br>MY HOME</h1>
+            <p class="hero-tagline">Crafting Code and Security</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">LET'S TALK</a>
+                <a href="#about" class="btn btn-secondary">Why ICT? My story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div>
+                    <h2 class="section-title">CRAFTING CODE AND SECURITY</h2>
+                    <p class="about-text">For over 20 years, I worked in the insurance industry, where digitalization transformed customer service, sales, and operational models. 
+                        These changes sparked a desire to evolve and learn something new. In early 2021, I made the decision to pivot toward the ICT field and joined an intensive 
+                        Code Bootcamp organized by the North Savo ELY Centre and Saranen Consulting. The program gave me a strong foundation in programming and software development, and more importantly, 
+                        the confidence and practical skills to pursue further academic studies in the field.</p>
+                    <p class="about-text">In summer 2022, I began my studies in Computer Software Engineering at JAMK University of Applied Sciences (Open UAS). 
+                        These studies have continued in various formats through 2025, with a focus on modern software development, artificial intelligence, and full-stack development. 
+                        Technologies I’ve studied and applied include Python, SQL, Linux, web programming, Agile/Scrum, DevOps, Docker (and containerization), cloud services, and virtual machine environments.</p>
+                    <p class="about-text">
+                        In summer 2025, I participated in a hands-on development project focused on building e-commerce infrastructure using the open-source PrestaShop platform. 
+                        Throughout the project, I deepened my expertise in container technologies (Docker) across both development and operations roles. My responsibilities included designing and implementing CI/CD pipelines, managing development and production environments on virtual machines, and integrating cloud services via CSC’s Pouta platform.
+                         We utilized GitLab for version control and automated deployment workflows, and I contributed to modular architecture design and PHP-based backend development.</p>
+                    <p class="about-text">
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section id="focus" class="goals">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">WHAT ARE MY INTERESTS IN THE ICT INDUSTRY?</h2>
+            
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-icon">⚡</div>
+                    <h3 class="goal-title">Web Development|Full Stack</h3>
+                    <p>My goal is to master both front-end and back-end technologies, understanding the entire development process from user interfaces to server-side logic.</p><br>
+                    <p>I believe that by embracing both aspects, the work becomes more versatile and motivating, while also increasing employment opportunities.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">🔒</div>
+                    <h3 class="goal-title">Cybersecurity</h3>
+                    <p>While working as an IT support specialist, I developed an interest in the functionality and security of systems and networks.</p><br>
+                    <p>Cybersecurity has emerged as one of the potential future directions for me, in addition to programming.</p>
+                </div>
+
+                                <div class="goal-card">
+                    <div class="goal-icon">⚡</div>
+                    <h3 class="goal-title">Shaping the Future</h3>
+                    <p>By combining my technical curiosity with a strong visual mindset, I aim to grow into roles that demand both creativity and analytical problem-solving. <br>
+                        Whether in full stack development or cybersecurity, my goal is to become a versatile professional who understands the whole picture while ensuring precision in the details.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">WHAT I HAVE DONE..?</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 50px; color: #ff9a56;">ACCOMPLISHED 😊</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🌐</div>
+                        <div>
+                            <div class="skill-title">Fundamentals of Software Development</div>
+                            <div class="skill-date">2021 — Precent</div>
+                        </div>
+                    </div>
+                    <p>In summer 2022, I began my studies in Computer Software Engineering at JAMK University of Applied Sciences (Open UAS), 
+                        continuing through 2025 with a focus on modern software development, artificial intelligence, and full-stack development. 
+                        During this time, I have gained hands-on experience with technologies such as Python, SQL, Linux, web programming, Agile/Scrum, 
+                        DevOps, Docker, cloud services, and virtual machine environments.
+                        <br><br>Prior to this, I completed the Code Bootcamp 2021 course, which covered the full software development lifecycle, including requirements definition, design, implementation, testing, and maintenance. The course introduced key programming languages like Python and JavaScript, version control with Git and GitHub, as well as basic web development using HTML and CSS, providing a solid foundation for further studies in software development.
+                        </p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🔐</div>
+                        <div>
+                            <div class="skill-title">Backend Summary of the PrestaShop Project</div>
+                            <div class="skill-date">2025</div>
+                        </div>
+                    </div>
+                    <p>Since June 2025, the PrestaShop project has focused on backend development and maintenance. The work has included setting up development and production environments on a Pouta Ubuntu virtual machine, building infrastructure with Docker and Docker Compose, and configuring GitLab CI/CD pipelines for automated deployment. 
+                       <br><br> All code is managed in GitLab, with CI/CD pipelines handling builds, testing, and production releases.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🌐</div>
+                        <div>
+                            <div class="skill-title">Agile|Scrum</div>
+                            <div class="skill-date">2025</div>
+                        </div>
+                    </div>
+                    <p>From an Agile Scrum perspective, a software project progresses in short sprints, with the team focusing on prioritized tasks and delivering concrete features. 
+                        At the start of each sprint, goals and roles are defined, and retrospectives help the team improve processes and collaboration.
+                        Learning occurs through practical experience: the team identifies bottlenecks, tests new solutions, and applies best practices in subsequent sprints. 
+                        <br><br>This enables agile development, quality improvement, and rapid adaptation to changes.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">☁️</div>
+                        <div>
+                            <div class="skill-title">Cloud Services</div>
+                            <div class="skill-date">Summer 2025</div>
+                        </div>
+                    </div>
+                    <p>Deploying and managing applications on cloud platforms with scalable architecture. </p>
+                    <p>CSC cloud services consist of Pouta hardware virtualization service, Rahti application containerization service, 
+                        Pukki database-as-a-service (DBaaS) and Noppe cloud platform.</p><br>
+                        <a href="https://research.csc.fi/" target="_blank" rel="noopener noreferrer" style="background-color: white; color: black;">Services for Research — CSC</a>
 
 
+                    <p></p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🌐</div>
+                        <div>
+                            <div class="skill-title">DevOps</div>
+                            <div class="skill-date">2025</div>
+                        </div>
+                    </div>
+                    <p>Agile Scrum focuses on iterative development and team collaboration, while DevOps integrates development and operational maintenance, enabling continuous integration, testing, and delivery (CI/CD).
+                        For example, in a PrestaShop project, DevOps practices support sprint goals by automating builds, tests, and deployment processes, as well as ensuring service monitoring and recovery in case of disruptions. 
+                        <br><br>This allows the team to practically combine development, testing, and production management, improving quality and accelerating response to changes.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🤖</div>
+                        <div>
+                            <div class="skill-title">Generative AI as Part of ICT Expertise</div>
+                            <div class="skill-date">2023 — Present</div>
+                        </div>
+                    </div>
+                    <p>Generative AI has become a key part of my learning and professional development. Tools like Copilot and ChatGPT have supported me in information retrieval, 
+                       problem-solving, and software development. They've helped automate documentation, streamline testing, and create customer-oriented solutions. 
+                       <br><br>AI is no longer just a technological concept — it’s a practical tool I use daily as part of my ICT expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Studies Section -->
+    <section id="studies" class="studies">
+        <div class="container">
+            <h2 class="section-title">MY LATEST STUDIES</h2>
+        </div>
+    </section>
 
-<!-- Figma iframe laatikko -->
-<div class="figma-container">
-    <iframe src="https://embed.figma.com/design/3nZHCrdoXOdpLkblWuK1Sk/%80MipoRepo?node-id=1-25&embed-host=share" 
-            allowfullscreen>
-    </iframe>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>CONTACT</h3>
+                    <div class="contact-item">
+                        <strong>Location:</strong><br>
+                        Finland
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong><br>
+                        +358 123 4567
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong><br>
+                        mikko.pohjola@example.com
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+    <form id="contactForm" action="https://formspree.io/f/mqadkagr" method="POST">
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" name="firstname" placeholder="Your First Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="lastname" placeholder="Your Last Name" required>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        
+        <div class="form-group">
+            <select name="service">
+                <option value="">Select Service</option>
+                <option value="recruitment">Looking for Employee or Intern</option>
+                <option value="general">General Inquiry</option>
+                <option value="website">Interested in Website Development</option>
+                <option value="ecommerce">Interested in E-commerce</option>
+                <option value="Consultation">General IT Consultation</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <textarea name="message" placeholder="Write your message here" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
+        <p style="font-size: 0.9rem; margin-top: 15px; color: #aaa;">
+            Please remember to write your name and email address. (required)
+        </p>
+    </form>
 </div>
-<div class="temp-content">
-    <!-- <a href="https://github.com/MipoRepo" target="_blank">My GitHub profile</a> -->
-    <br>
-    <p>This page's UI was designed in Figma — feel free to explore it.</p>
-    <p>You can move the Figma design with your mouse, and zoom by holding the Shift key and scrolling the mouse wheel.</p>
-    <p>The final pages will be ready soon.</p>
-</div>
-    <!-- Script -->
-    <script src="assets/js/script.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>All rights reserved © Mikko Pohjola</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.9)';
+            }
+        });
+
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.goal-card, .skill-card');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run once on load
+    </script>
 </body>
 </html>
-
