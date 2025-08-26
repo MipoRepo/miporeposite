@@ -274,13 +274,19 @@
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Scrollataan vain sisäisiin linkkeihin (#-alkuisiin)
+        if (href.length > 1) {  
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+           }
+         });
         });
+
 
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -317,6 +323,7 @@
 </body>
 
 </html>
+
 
 
 
