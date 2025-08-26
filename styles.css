@@ -47,6 +47,10 @@ nav .container {
     font-weight: bold;
 }
 
+.logo-image {
+    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
+}
+
 .nav-links {
     display: flex;
     list-style: none;
