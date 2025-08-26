@@ -23,7 +23,6 @@ nav {
     top: 0;
     width: 100%;
     background: rgba(14, 13, 13, 0.726);
-    backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 8px 0;
 }
@@ -36,8 +35,8 @@ nav .container {
 
 .logo-wrapper {
     position: fixed; /* pysyy näytöllä scrollattaessa */
-    top: 0;
-    left: 20px; /* sama kuin navin alkuperäinen padding */
+    top: 5;
+    left: 25px; /* sama kuin navin alkuperäinen padding */
     z-index: 1100;
 }
 
