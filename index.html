@@ -198,62 +198,66 @@
 
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+<section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>CONTACT</h3>
+
                     <div class="contact-item">
-                        <a href="https://github.com/MipoRepo" target="_blank"; text-decoration: none; font-weight: 600;">Link to my GitHub repository</a>
+                        <strong>Link: my GitHub ropository</strong><br>
+                        <a href="https://github.com/MipoRepo" target="_blank" style="text-decoration: none; font-weight: 600;"></a>
                     </div>
+                    
                     <div class="contact-item">
                         <strong>Location:</strong><br>
                         Jyväskylä, Finland
+                    </div>
                     <div class="contact-item">
                         <strong>Email:</strong><br>
                         mikko.t.pohjola@gmail.com
                     </div>
-                  </div>
+                </div>
                 
-    <div class="contact-form">
-    <form id="contactForm" action="https://formspree.io/f/mqadkagr" method="POST">
-        <div class="form-row">
+        <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/mqadkagr" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" name="firstname" placeholder="Your First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="lastname" placeholder="Your Last Name" required>
+                </div>
+            </div>
+            
             <div class="form-group">
-                <input type="text" name="firstname" placeholder="Your First Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
+            
             <div class="form-group">
-                <input type="text" name="lastname" placeholder="Your Last Name" required>
+                <select name="service">
+                    <option value="">Select Service</option>
+                    <option value="recruitment">Looking for Employee or Intern</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="website">Interested in Website Development</option>
+                    <option value="ecommerce">Interested in E-commerce</option>
+                    <option value="Consultation">General IT Consultation</option>
+                </select>
             </div>
-        </div>
-        
-        <div class="form-group">
-            <input type="email" name="email" placeholder="Email Address" required>
-        </div>
-        
-        <div class="form-group">
-            <select name="service">
-                <option value="">Select Service</option>
-                <option value="recruitment">Looking for Employee or Intern</option>
-                <option value="general">General Inquiry</option>
-                <option value="website">Interested in Website Development</option>
-                <option value="ecommerce">Interested in E-commerce</option>
-                <option value="Consultation">General IT Consultation</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <textarea name="message" placeholder="Write your message here" required></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">SUBMIT</button>
-        <p style="font-size: 0.9rem; margin-top: 15px; color: #aaa;">
-            Please remember to write your name and email address. (required)
-        </p>
-    </form>
-</div>
+            
+            <div class="form-group">
+                <textarea name="message" placeholder="Write your message here" required></textarea>
             </div>
+            
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+            <p style="font-size: 0.9rem; margin-top: 15px; color: #aaa;">
+                Please remember to write your name and email address. (required)
+            </p>
+        </form>
         </div>
-    </section>
+       </div> <!-- contact-content -->
+    </div> <!-- container -->
+</section>
 
     <!-- Footer -->
     <footer>
@@ -308,6 +312,7 @@
 </body>
 
 </html>
+
 
 
 
