@@ -73,7 +73,7 @@ nav .container {
 /* Hero Section */
 .hero {
     height: 70vh;
-    width: 100%;
+    width: 100vw;
 
     background: linear-gradient(135deg, 
         rgba(0, 0, 0, 0.4), 
@@ -81,7 +81,7 @@ nav .container {
         url('header.png') center/cover no-repeat;
     background-attachment: fixed; /* Tämä pitää kuvan paikallaan vierityksessä */
     
-    display: flex;
+    display block;
     align-items: center;
     justify-content: center;
     text-align: center;
