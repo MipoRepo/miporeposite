@@ -332,12 +332,16 @@ nav .container {
     text-decoration: none;
     color: white;
     font-weight: 500;
+    pointer-events: auto;
+    border: 2px dashed red;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .linkedin-logo {
     height: 48px;
     vertical-align: middle;
     margin-right: 5px;
+    pointer-events: none;
 }
 
 .linkedin-logo:hover {
