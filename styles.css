@@ -47,7 +47,7 @@ nav .container {
 }
 
 .logo-image {
-    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
+    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 8px white);
 }
 
 .nav-links {
