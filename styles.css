@@ -318,18 +318,24 @@ nav .container {
     text-align: center;
 }
 
+.linkedin-wrapper {
+    text-align: center; /* vaakakeskus */
+    margin-top: 20px;  /* pieni väli otsikon alle */
+}
+
 .linkedin-logo {
     width: 24px;
     height: 24px;
     vertical-align: middle;
-    margin-right: 5px; /* pieni väli kuvan ja tekstin väliin */
+    margin-right: 5px;
 }
 
 .linkedin-link {
     text-decoration: none;
-    color: #0A66C2; /* LinkedInin sininen */
+    color: #0A66C2;
     font-weight: 500;
 }
+
 
 /* Contact Section */
 .contact {
