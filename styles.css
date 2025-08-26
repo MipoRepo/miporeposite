@@ -318,6 +318,19 @@ nav .container {
     text-align: center;
 }
 
+.linkedin-logo {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px; /* pieni väli kuvan ja tekstin väliin */
+}
+
+.linkedin-link {
+    text-decoration: none;
+    color: #0A66C2; /* LinkedInin sininen */
+    font-weight: 500;
+}
+
 /* Contact Section */
 .contact {
     padding: 100px 0;
