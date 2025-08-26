@@ -238,22 +238,21 @@
             <div class="form-group">
                 <input type="email" name="email" placeholder="Email Address" required>
             </div>
-            
+            <input type="hidden" name="_replyto" value="">
+
             <div class="form-group">
                 <select name="service">
                     <option value="">Select Topic of Inquiry</option>
                     <option value="recruitment">Looking for Employee or Intern</option>
                     <option value="general">General Inquiry</option>
-                    <option value="website">Interested in Website Development</option>
-                    <option value="ecommerce">Interested in E-commerce</option>
-                    <option value="Consultation">General IT Consultation</option>
                 </select>
             </div>
             
             <div class="form-group">
                 <textarea name="message" placeholder="Write your message here" required></textarea>
             </div>
-            
+            <!-- Uudelleenohjaus kiitos-sivulle -->
+            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
             <button type="submit" class="btn btn-primary">SUBMIT</button>
             <p style="font-size: 0.9rem; margin-top: 15px; color: #aaa;">
                 Please remember to write your name and email address. (required)
@@ -338,6 +337,7 @@
 </body>
 
 </html>
+
 
 
 
