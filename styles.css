@@ -335,6 +335,7 @@ nav .container {
     pointer-events: auto;
     border: 2px dashed red;
     background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
 }
 
 .linkedin-logo {
