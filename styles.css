@@ -76,18 +76,18 @@ nav .container {
     width: 100vw;
 
     background: linear-gradient(135deg, 
-        rgba(0, 0, 0, 0.4), 
-        rgba(216, 211, 170, 0.103)), 
+        rgba(0, 0, 0, 0.5), 
+        rgba(216, 211, 170, 0.1)), 
         url('header.png') center/cover no-repeat;
-    background-attachment: fixed; /* Tämä pitää kuvan paikallaan vierityksessä */
-    
-    display block;
+    background-attachment: fixed; /* Keeps the image fixed during scroll */
+    background-color: #000;
+
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     position: relative;
-    /* Terävöitysefekti */
 }
 
 /* Fallback for when image isn't available */
