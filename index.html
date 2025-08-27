@@ -9,16 +9,20 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="container">
-            <ul class="nav-links">
-                <li><a href="#about">About me</a></li>
-                <li><a href="#focus">My Focus</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#studies">work experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <div class="container">
+        <div class="menu-toggle" id="mobile-menu">
+            ☰
         </div>
-    </nav>
+        <ul class="nav-links">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#focus">My Focus</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#studies">Work experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    
     <div class="logo-wrapper">
             <img src="logo.png" class="logo-image" height="160" alt="python logo" />
     </div>
@@ -305,6 +309,10 @@
 
 <!-- JavaScript -->
     <script>
+        // Nav
+        document.getElementById('mobile-menu').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -370,6 +378,7 @@
 </body>
 
 </html>
+
 
 
 
