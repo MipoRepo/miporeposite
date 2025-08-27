@@ -943,6 +943,10 @@ footer {
     font-size: 2rem;
     color: white;
     cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;   /* oikealle */
+    z-index: 1200;
 }
 
 /* Animations */
@@ -985,14 +989,14 @@ footer {
 
     /* Logo */
     .logo-image {
-        max-width: 80px;
+        max-width: 30px;
         height: auto;
     }
 
     /* Hero section */
     .hero {
         height: 80vh;   /* hieman matalampi mobiilissa */
-        padding: 0 15px;
+       padding: 120px 15px 0 15px; 
     }
 
     .hero-content h1 {
