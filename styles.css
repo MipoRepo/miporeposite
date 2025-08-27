@@ -991,10 +991,16 @@ footer {
 
     /* Logo */
     .logo-image {
-        max-width: 3rem;
+        max-width: 5rem;
         height: auto;
     }
 
+    /* About section */
+    .about-image {
+    width: 200px;
+    height: 200px;
+    }
+    
     /* Hero section */
     .hero {
         height: 80vh;   /* hieman matalampi mobiilissa */
