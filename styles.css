@@ -352,6 +352,7 @@ nav .container {
     border: 28px rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.1);
+    padding: 8px 24px; /* lisää oikealle tilaa */
     z-index: 10;
 }
 
@@ -990,7 +991,7 @@ footer {
 
     /* Logo */
     .logo-image {
-        max-width: 70px;
+        max-width: 3rem;
         height: auto;
     }
 
