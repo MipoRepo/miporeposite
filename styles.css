@@ -839,21 +839,6 @@ footer {
 }
 
 /* Mobile Responsive */
-@media (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-tagline {
-    font-size: 1rem;
-  }
-
-  .cta-buttons a {
-    display: block;
-    margin: 0.5rem auto;
-  }
-}
-
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -862,19 +847,11 @@ footer {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
-    .hero-subtitle {
-    font-size: 1.4rem;
-    }
 
-    .hero-tagline {
-    font-size: 1rem;
-    
     .about-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
 
     .skills-grid {
         grid-template-columns: 1fr;
