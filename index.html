@@ -30,7 +30,7 @@
 <!-- Hero Section (VIDEO BACKGROUND) -->
 <section class="hero">
 
-    <video class="hero-video" autoplay muted loop playsinline>
+    <video class="hero-video" autoplay muted loop playsinline id="hero-video">
         <source src="header-v.mp4" type="video/mp4">
     </video>
 
@@ -155,46 +155,18 @@
 
 <!-- JS -->
 <script>
-document.getElementById('mobile-menu').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('active');
-});
+    // Mobile menu toggle
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Hero video slowdown
+    const heroVideo = document.getElementById('hero-video');
+    heroVideo.playbackRate = 0.5; // 50% speed, hidastus
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
