@@ -1,4 +1,3 @@
-/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +5,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
-    background-color: #fff; /* Lisätty selkeyden vuoksi */
 }
 
 .container {
@@ -19,57 +17,54 @@ body {
     padding: 0 20px;
 }
 
-/* ================= NAV ================= */
-
+/* Navigation */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(14, 13, 13, 0.9); /* Hieman tummempi luettavuuden vuoksi */
+    background: rgba(14, 13, 13, 0.726);
     z-index: 1000;
-    padding: 15px 0; /* Hieman enemmän tilaa */
-    transition: background 0.3s ease;
+    padding: 8px 0;
 }
 
 nav .container {
     display: flex;
-    justify-content: flex-end; /* Muutettu: linkit oikealle, koska logo on fixed vasemmalla */
+    justify-content: space-between;
     align-items: center;
 }
 
 .logo-wrapper {
-    position: fixed;
-    top: 10px;
-    left: 25px;
+    position: fixed; /* pysyy näytöllä scrollattaessa */
+    top: 5px;
+    left: 25px; /* sama kuin navin alkuperäinen padding */
     z-index: 1100;
 }
 
-.logo-image {
-    max-width: 100px;
-    height: auto;
-    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+.logo {
+    color: #ecb02ebb;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
+.logo-image {
+    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 8px white);
+    max-width: 120px;
+    height: auto;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 30px;
+    margin-left: auto; 
+    padding-right: 40px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 0.9rem;
     transition: color 0.3s;
 }
 
@@ -77,175 +72,306 @@ nav .container {
     color: #ff6b35;
 }
 
-/* ================= HERO (VIDEO 1280x420) ================= */
-
+/* Hero Section */
 .hero {
-    width: 100%;
-    height: 420px; 
-    max-width: 1280px; 
-    margin: 60px auto 0; /* Lisätty margin-top, jotta navi ei peitä yläosaa */
-    position: relative;
-    overflow: hidden;
+    height: 70vh;
+    width: 100vw;
+
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.5), 
+        rgba(216, 211, 170, 0.1)), 
+        url('header.png') center/cover no-repeat;
+    background-attachment: fixed; /* Keeps the image fixed during scroll */
+    background-color: #000;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    background: #000; /* Taustaväri jos video ei lataudu */
-}
-
-/* 🎥 Video background - Optimoitu asettelu */
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%; 
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 0;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.3)
-    );
-    z-index: 1;
-}
-
-.hero-content {
     position: relative;
-    z-index: 2;
-    padding: 0 20px;
+}
+
+/* Fallback for when image isn't available */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ff9a56, #ff6b35);
+    z-index: -1;
 }
 
 .hero-content h1 {
-    font-size: 2.8rem; 
-    line-height: 1.2;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    font-size: 4rem;
+    margin-bottom: 20px;
     animation: fadeInUp 1s ease-out;
 }
 
+.hero-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    animation: fadeInUp 1s ease-out 0.3s both;
+    text-shadow: 
+        0 0 2px #ffd900f6,
+        0 0 4px #ffd90098,
+        0 0 6px #ffa600b7,
+        0 0 8px #ffd90088;
+}
+
 .hero-tagline {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
     animation: fadeInUp 1s ease-out 0.6s both;
 }
 
-/* Buttons */
 .cta-buttons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     animation: fadeInUp 1s ease-out 0.9s both;
 }
 
 .btn {
-    padding: 12px 28px;
+    padding: 15px 30px;
+    border: none;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease;
-    display: inline-block;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
 .btn-primary {
     background: #ff6b35;
     color: white;
-    border: 2px solid #ff6b35;
 }
 
 .btn-primary:hover {
-    background: transparent;
-    color: #ff6b35;
-    transform: translateY(-3px);
+    background: #ff5722;
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    border: 2px solid white;
+    background: transparent;
     color: white;
+    border: 2px solid white;
 }
 
 .btn-secondary:hover {
     background: white;
     color: #333;
-    transform: translateY(-3px);
 }
 
-/* ================= SECTION COMMON ================= */
-
-.section-title {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    position: relative;
-    text-transform: uppercase;
-}
-
-/* ================= ABOUT ================= */
-
+/* About Section */
 .about {
     padding: 100px 0;
-    background: #ffffff;
+    background: #fffaef;
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
 }
 
 .about-image {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    background: url("about-image.jpg") center/cover no-repeat;
-    margin: auto;
-    border: 8px solid #f0f0f0;
+    background: linear-gradient(135deg, #ff6b35, #ff9a56);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+    margin: 0 auto;
+    background: url('about-image.jpg') center/cover no-repeat;
 }
 
-/* ================= SKILLS & GOALS ================= */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
 
-.skills, .goals {
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Goals Section */
+.goals {
     padding: 100px 0;
-    background: #111;
+    background: #fffaef;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.goal-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.goal-card:hover {
+    transform: translateY(-10px);
+}
+
+.goal-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b35, #ff9a56);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
     color: white;
 }
 
-.goals { background: #1a1a1a; } /* Hienoinen sävyero */
+.goal-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
 
-.skills-grid, .goals-grid {
+/* Skills Section */
+.skills {
+    padding: 100px 0;
+    background: #1a1a1a;
+    color: white;
+}
+
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    margin-top: 50px;
 }
 
-.skill-card, .goal-card {
-    background: #222;
-    padding: 40px;
-    border-radius: 12px;
+.skill-card {
+    background: linear-gradient(135deg, #333, #444);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.skill-card:hover::before {
+    left: 100%;
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-icon {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.skill-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.skill-date {
+    color: #ff9a56;
+    font-size: 0.9rem;
+}
+
+/* Work Section, was Studies Section */
+.studies {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ff9a56, #ff6b35);
+    position: relative;
+}
+
+.studies::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.3));
+}
+
+.studies .section-title {
+    color: white;
+    text-align: center;
+}
+
+.linkedin-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    pointer-events: auto;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.linkedin-logo {
+    height: 48px;
+    vertical-align: middle;
+    margin-right: 5px;
+    pointer-events: none;
+}
+
+.linkedin-logo:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
     transition: all 0.3s ease;
-    border: 1px solid #333;
 }
 
-.skill-card:hover, .goal-card:hover {
-    transform: translateY(-10px);
-    border-color: #ff6b35;
-}
-
-/* ================= CONTACT ================= */
-
+/* Contact Section */
 .contact {
     padding: 100px 0;
-    background: #0a0a0a;
+    background: #1a1a1a;
     color: white;
 }
 
@@ -257,45 +383,26 @@ nav .container {
 
 .contact-info h3 {
     margin-bottom: 20px;
-    color: #ff6b35;
+    font-size: 1.5rem;
 }
 
 .contact-item {
-    margin-bottom: 20px;
-}
-
-.contact-item a {
-    color: #ff6b35;
+    margin-bottom: 15px;
 }
 
 .me-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 15px; /* Kokeile neliötä pyöristetyillä kulmilla profiilikuvaksi */
-    background: url("foto.jpeg") center/cover no-repeat;
-    margin-bottom: 30px;
-    border: 3px solid #333;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: url('foto.jpeg') center/cover no-repeat;
+    display: block;
+    margin: 30px auto 30px auto;
 }
 
 .contact-form {
-    background: #1a1a1a;
+    background: #333;
     padding: 40px;
     border-radius: 10px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group input, 
-.form-group select, 
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    background: #222;
-    border: 1px solid #444;
-    color: white;
-    border-radius: 5px;
 }
 
 .form-row {
@@ -305,30 +412,52 @@ nav .container {
     margin-bottom: 20px;
 }
 
-/* ================= FOOTER ================= */
+.form-group {
+    margin-bottom: 20px;
+}
 
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #555;
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Footer */
 footer {
     background: #000;
-    color: #888;
+    color: white;
     text-align: center;
-    padding: 50px 0;
-    border-top: 1px solid #222;
+    padding: 30px 0;
 }
 
-footer img {
-    margin: 10px;
-    filter: grayscale(100%);
-    transition: 0.3s;
-    opacity: 0.6;
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1200;
 }
 
-footer img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
-/* ================= ANIMATIONS ================= */
-
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -340,66 +469,65 @@ footer img:hover {
     }
 }
 
-/* ================= MOBILE ================= */
-
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .container { padding: 0 30px; }
-
-    .logo-wrapper { left: 15px; }
-
     .menu-toggle {
         display: block;
-        z-index: 1001;
     }
 
     .nav-links {
         display: none;
-        position: fixed; /* Muutettu absolute -> fixed */
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 70%;
-        background: rgba(0,0,0,0.98);
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+        gap: 15px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        border-radius: 8px;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    .hero {
-        height: 500px; /* Mobiilissa usein parempi olla korkeampi */
-        margin-top: 0;
-    }
-
-    .hero-video {
-        width: auto;
-        height: 100%;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
+    .logo-image {
+        max-width: 5rem;
+        height: auto;
     }
 
     .about-image {
-        margin-bottom: 30px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero {
+        height: 80vh;
+        padding: 120px 15px 0 15px; 
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.9rem;
+    }
+
+    .about-content,
+    .contact-content,
+    .skills-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .cta-buttons {
         flex-direction: column;
+        align-items: center;
     }
 }
