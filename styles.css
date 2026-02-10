@@ -41,8 +41,7 @@ nav .container {
 }
 
 .logo-image {
-    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 8px white);
-    max-width: 120px;
+    max-width: 140px;
     height: auto;
 }
 
