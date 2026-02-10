@@ -72,14 +72,15 @@ nav .container {
     color: #ff6b35;
 }
 
-/* ================= HERO (VIDEO) ================= */
+/* ================= HERO (VIDEO 1280x420) ================= */
 
 .hero {
-    height: 70vh;
-    width: 100vw;
+    width: 100%;
+    height: 420px; /* uusi korkeus */
+    max-width: 1280px; /* video ei kasva leveämmäksi */
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,11 +93,16 @@ nav .container {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
+    width: 1280px; /* tarkka leveys */
+    height: 420px; /* tarkka korkeus */
     transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: 0;
+}
+
+/* Hidastus JavaScriptillä */
+.hero-video[data-speed="0.5"] {
+    /* Merkintä hidastukselle, vaatii JS:ssä asettamisen */
 }
 
 /* 🌫 Gradient overlay */
@@ -119,33 +125,33 @@ nav .container {
 }
 
 .hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
+    font-size: 3rem; /* hieman pienempi, sopii videon kokoon */
+    margin-bottom: 15px;
     animation: fadeInUp 1s ease-out;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 .hero-tagline {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1rem;
+    margin-bottom: 20px;
     animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 /* Buttons */
 .cta-buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     animation: fadeInUp 1s ease-out 0.9s both;
 }
 
 .btn {
-    padding: 15px 30px;
+    padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -303,12 +309,25 @@ footer {
     }
 
     .hero {
-        height: 80vh;
-        padding-top: 120px;
+        height: 320px;
+        width: 100%;
+    }
+
+    .hero-video {
+        width: 100%;
+        height: auto;
     }
 
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.8rem;
     }
 
     .about-content,
