@@ -66,7 +66,7 @@ nav .container {
     color: #ff6b35;
 }
 
-/* Hero Section */
+/* Hero Section - FIXED BACKGROUND EFFECT */
 .hero {
     height: 70vh;
     width: 100vw;
@@ -78,20 +78,22 @@ nav .container {
     text-align: center;
     color: white;
     background-color: #000;
+    /* Tämä varmistaa, että hero pysyy paikoillaan kunnes sisältö tulee päälle */
+    clip-path: inset(0 0 0 0); 
 }
 
 .hero::after {
     content: '';
-    position: absolute;
+    position: fixed; /* LUKITSEE KUVAN PAIKOILLEEN NÄYTTÖÖN */
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 70vh; /* Sama kuin heron korkeus */
     background: linear-gradient(135deg, 
         rgba(0, 0, 0, 0.65), 
         rgba(0, 0, 0, 0.15)), 
         url('header.webp') center/cover no-repeat;
-    z-index: 0;
+    z-index: -1;
     animation: panoramaZoomOut 30s infinite alternate ease-in-out;
     transform-origin: center;
 }
@@ -153,8 +155,10 @@ nav .container {
     color: #333;
 }
 
-/* Content Sections */
+/* Content Sections - NÄMÄ LIUKUVAT KUVAN YLI */
 .about, .goals, .skills, .contact, .studies {
+    position: relative;
+    z-index: 10; /* Nostaa sisällön paikoillaan olevan taustakuvan päälle */
     padding: 100px 0;
 }
 
@@ -273,6 +277,8 @@ footer {
     color: white;
     text-align: center;
     padding: 50px 0 30px 0;
+    position: relative;
+    z-index: 10;
 }
 
 footer .container:first-child {
@@ -283,7 +289,6 @@ footer .container:first-child {
     margin-bottom: 30px;
 }
 
-/* Tummat logot asetukset */
 footer img {
     filter: grayscale(100%);
     opacity: 0.6;
@@ -309,11 +314,17 @@ footer img:hover {
     100% { transform: scale(1.0); }
 }
 
-/* Responsive */
+/* Mobile */
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .hero-content h1 { font-size: 2.2rem; }
     .about-content, .contact-content { grid-template-columns: 1fr; text-align: center; }
     .form-row { grid-template-columns: 1fr; }
     .about-image { width: 200px; height: 200px; }
+    
+    /* Mobiilissa kiinteät taustat voivat olla raskaita, varmistetaan toimivuus */
+    .hero::after {
+        position: absolute;
+        height: 100%;
+    }
 }
