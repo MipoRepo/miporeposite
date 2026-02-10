@@ -34,9 +34,9 @@ nav .container {
 }
 
 .logo-wrapper {
-    position: fixed; /* pysyy näytöllä scrollattaessa */
+    position: fixed;
     top: 5px;
-    left: 25px; /* sama kuin navin alkuperäinen padding */
+    left: 25px;
     z-index: 1100;
 }
 
@@ -76,23 +76,34 @@ nav .container {
 .hero {
     height: 70vh;
     width: 100vw;
-
-    background: linear-gradient(135deg, 
-        rgba(0, 0, 0, 0.5), 
-        rgba(216, 211, 170, 0.1)), 
-        url('header.png') center/cover no-repeat;
-    background-attachment: fixed; /* Keeps the image fixed during scroll */
-    background-color: #000;
-
+    position: relative;
+    overflow: hidden; /* Estää kuvan vuotamisen reunojen yli zoomatessa */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    position: relative;
+    background-color: #000;
 }
 
-/* Fallback for when image isn't available */
+/* Tämä elementti hoitaa panoraaman ja zoomauksen */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.1)), 
+        url('header.webp') center/cover no-repeat;
+    z-index: 0;
+    animation: panoramaZoom 25s infinite alternate ease-in-out;
+    transform-origin: center;
+}
+
+/* Fallback jos kuva ei lataudu */
 .hero::before {
     content: '';
     position: absolute;
@@ -102,6 +113,11 @@ nav .container {
     bottom: 0;
     background: linear-gradient(135deg, #ff9a56, #ff6b35);
     z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Nostaa tekstin animaation yläpuolelle */
 }
 
 .hero-content h1 {
@@ -312,7 +328,7 @@ nav .container {
     font-size: 0.9rem;
 }
 
-/* Work Section, was Studies Section */
+/* Work Section */
 .studies {
     padding: 100px 0;
     background: linear-gradient(135deg, #ff9a56, #ff6b35);
@@ -469,6 +485,16 @@ footer {
     }
 }
 
+/* Panoraamazoomaus animaatio */
+@keyframes panoramaZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15); /* Hidas zoom, joka imee sisäänpäin */
+    }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -504,6 +530,11 @@ footer {
     .hero {
         height: 80vh;
         padding: 120px 15px 0 15px; 
+    }
+
+    /* Varmistetaan mobiilissa ettei zoom mene liian isoksi */
+    .hero::after {
+        animation: panoramaZoom 30s infinite alternate ease-in-out;
     }
 
     .hero-content h1 {
