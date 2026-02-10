@@ -66,7 +66,7 @@ nav .container {
     color: #ff6b35;
 }
 
-/* Hero Section - FIXED BACKGROUND EFFECT */
+/* Hero Section */
 .hero {
     height: 70vh;
     width: 100vw;
@@ -78,22 +78,22 @@ nav .container {
     text-align: center;
     color: white;
     background-color: #000;
-    /* Tämä varmistaa, että hero pysyy paikoillaan kunnes sisältö tulee päälle */
     clip-path: inset(0 0 0 0); 
 }
 
 .hero::after {
     content: '';
-    position: fixed; /* LUKITSEE KUVAN PAIKOILLEEN NÄYTTÖÖN */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70vh; /* Sama kuin heron korkeus */
+    height: 70vh;
     background: linear-gradient(135deg, 
         rgba(0, 0, 0, 0.65), 
         rgba(0, 0, 0, 0.15)), 
         url('header.webp') center/cover no-repeat;
     z-index: -1;
+    /* Pienempi aloituszoomi (1.1) estää rasteroitumista */
     animation: panoramaZoomOut 30s infinite alternate ease-in-out;
     transform-origin: center;
 }
@@ -155,10 +155,10 @@ nav .container {
     color: #333;
 }
 
-/* Content Sections - NÄMÄ LIUKUVAT KUVAN YLI */
+/* Sections */
 .about, .goals, .skills, .contact, .studies {
     position: relative;
-    z-index: 10; /* Nostaa sisällön paikoillaan olevan taustakuvan päälle */
+    z-index: 10;
     padding: 100px 0;
 }
 
@@ -211,7 +211,7 @@ nav .container {
 
 .skill-card:hover, .goal-card:hover { transform: translateY(-10px); }
 
-/* LinkedIn Section */
+/* LinkedIn Section - KORJATTU LOGO */
 .studies {
     background: linear-gradient(135deg, #ff9a56, #ff6b35);
     color: white;
@@ -230,7 +230,10 @@ nav .container {
     transition: background 0.3s;
 }
 
-.linkedin-link:hover { background: rgba(255, 255, 255, 0.2); }
+.linkedin-logo {
+    height: 30px; /* Pakotetaan LinkedIn-logo takaisin pieneksi */
+    width: auto;
+}
 
 /* Contact */
 .contact { background: #1a1a1a; color: white; }
@@ -310,7 +313,7 @@ footer img:hover {
 }
 
 @keyframes panoramaZoomOut {
-    0% { transform: scale(1.3); }
+    0% { transform: scale(1.1); } /* Laskettu 1.3 -> 1.1 tarkkuuden parantamiseksi */
     100% { transform: scale(1.0); }
 }
 
@@ -322,7 +325,6 @@ footer img:hover {
     .form-row { grid-template-columns: 1fr; }
     .about-image { width: 200px; height: 200px; }
     
-    /* Mobiilissa kiinteät taustat voivat olla raskaita, varmistetaan toimivuus */
     .hero::after {
         position: absolute;
         height: 100%;
