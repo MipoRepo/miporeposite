@@ -99,7 +99,7 @@ nav .container {
         url("../img/header.webp") center/cover no-repeat;
     z-index: -1;
     /* Pienempi aloituszoomi (1.1) estää rasteroitumista */
-    animation: panoramaZoomOut 30s infinite alternate ease-in-out;
+    animation: panoramaZoomOut 10s infinite alternate ease-in-out;
     transform-origin: center;
 }
 
