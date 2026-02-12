@@ -146,8 +146,8 @@ nav .container {
 }
 
 .about-image {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     background: url("../img/about-image.jpg") center/cover no-repeat;
     margin: 0 auto;
