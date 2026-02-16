@@ -24,7 +24,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(14, 13, 13, 0.726);
+    background: rgba(14, 13, 13, 0.9);
     z-index: 1000;
     padding: 8px 0;
 }
@@ -73,7 +73,7 @@ nav .container {
 /* Hero Section */
 /*-------------------------------*/
 .hero {
-    height: 70vh;
+    height: 55vh;
     width: 100vw;
     position: relative;
     overflow: hidden; 
@@ -83,7 +83,7 @@ nav .container {
     text-align: center;
     color: white;
     background-color: #000;
-    clip-path: inset(0 0 0 0); 
+    clip-path: inset(0 0 0 0);
 }
 
 .hero::after {
@@ -92,15 +92,17 @@ nav .container {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70vh;
+    height: 55vh;
     background: linear-gradient(135deg, 
         rgba(0, 0, 0, 0.65), 
         rgba(0, 0, 0, 0.15)), 
         url("../img/header.webp") center/cover no-repeat;
     z-index: -1;
-    /* Pienempi aloituszoomi (1.1) estää rasteroitumista */
-    animation: panoramaZoomOut 10s infinite alternate ease-in-out;
+    /* Hidastettu XXs sekuntiin ja lisätty pehmeä liike */
+    animation: panoramaZoomOut 27s infinite alternate ease-in-out;
     transform-origin: center;
+    will-change: transform;
+    perspective: 10px; /* Lisää syvyyttä panorointiin */
 }
 
 .hero-content {
@@ -111,14 +113,48 @@ nav .container {
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 20px;
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 1.5s ease-out;
     line-height: 1.1;
 }
 
 .hero-tagline {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    animation: fadeInUp 1s ease-out 0.6s both;
+    animation: fadeInUp 1.5s ease-out 1.0s both;
+}
+/*-------------------------------*/
+/* Keyframes */
+/*-------------------------------*/
+@keyframes panoramaZoomOut {
+    0% {
+        /* Alussa kuva on lähellä ja kallellaan vasemmalle */
+        transform: scale(1.0) rotateY(-5deg);
+    }
+    100% {
+        /* Lopussa kuva on kauempana ja kallellaan oikealle */
+        transform: scale(0.6) rotateY(5deg);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes panoramaZoomOut {
+    0% { transform: scale(1.1); } /* Laskettu 1.3 -> 1.1 tarkkuuden parantamiseksi */
+    100% { transform: scale(1.0); }
 }
 
 /*-------------------------------*/
@@ -285,35 +321,88 @@ nav .container {
     margin-bottom: 25px;
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #333;
+    /* Muutettu valkoiseksi, jotta se erottuu tummemmasta lasitaustasta */
+    color: rgba(255, 255, 255, 0.9); 
 }
 
-.text-block-light {
-    margin-bottom: 25px;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #eee;
+.goal-title {
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .single-column-card {
-    background: #fffaef;
-    color: #333;
+    /* Glassmorphism-tehoste */
+    background: rgba(255, 255, 255, 0.1); /* Erittäin läpinäkyvä valkoinen */
+    backdrop-filter: blur(15px);          /* Tämä tekee lasimaisen sumennuksen */
+    -webkit-backdrop-filter: blur(15px);  /* Tuki Safarille */
+    
+    /* Reuna ja varjo tuovat syvyyttä */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    
+    color: white; /* Teksti valkoiseksi */
     padding: 60px 40px;
-    margin: 60px auto; /* Tämä lisää tyhjää kortin ympärille */
-
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 800px; /* sama leveys kuin single-column suositus */
+    border-radius: 20px; /* Hieman pyöreämmät kulmat sopivat tyyliin paremmin */
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .roadmap {
-    background: linear-gradient(135deg, #ff9a56, #ff6b35);
-    padding: 70px 0; /* lisää tilaa ylös ja alas */
-
+    /* Voimakkaampi liukuväri, jotta lasiefekti korostuu */
+    background: linear-gradient(135deg, #f25f03, #ff6b35, #f3bb99);
+    background-attachment: fixed; /* Valinnainen: pitää taustan paikallaan skrollatessa */
+    padding: 100px 0;
     color: white;
 }
+.goal-title-roadmap {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.text-block-roadmap {
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    font: bold;
+    line-height: 1.7;
+    /* Muutettu valkoiseksi, jotta se erottuu tummemmasta lasitaustasta */
+    color: rgba(255, 255, 255, 0.9); 
+}
 
+.roadmap-text {
+    display: flex;
+
+    flex-direction: column;
+    gap: 10px;
+}
+
+.roadmap-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.roadmap-image {
+    width: 225px;      /* 9:16 */
+    height: 400px;     /* 16 */
+    background-image: url("../img/look-here.webp");
+    background-size: cover;
+    background-position: right;
+    border-radius: 10px;
+}
+
+.roadmap-link {
+    display: inline;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+.roadmap-link:hover {
+    color: #ff6b35;
+    border-bottom-color: #ff6b35;
+    transform: translateY(-2px);
+}
 /*-------------------------------*/
 /* LinkedIn Section */
 /*-------------------------------*/
@@ -399,6 +488,8 @@ nav .container {
     font-weight: bold;
     transition: all 0.3s;
     cursor: pointer;
+    align-items: center;
+    display: inline-flex;    
 }
 
 .btn-primary {
@@ -457,18 +548,7 @@ footer img:hover {
     opacity: 1;
     transform: scale(1.1);
 }
-/*-------------------------------*/
-/* Keyframes */
-/*-------------------------------*/
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
-@keyframes panoramaZoomOut {
-    0% { transform: scale(1.1); } /* Laskettu 1.3 -> 1.1 tarkkuuden parantamiseksi */
-    100% { transform: scale(1.0); }
-}
 
 /*-------------------------------*/
 /* Mobile */

@@ -50,11 +50,28 @@ function animateOnScroll() {
         const elementVisible = 150;
         if (elementTop < window.innerHeight - elementVisible) {
             element.style.opacity = "1";
-            element.style.transform = "translateY(0)";
-            element.style.animation = 'fadeInUp 0.6s ease-out forwards';
+            element.classList.add('animate-in'); 
         }
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const target = document.querySelector(".roadmap-image");
+    const animatedSrc = target.dataset.animated;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Käynnistää animaation uudelleen
+                target.style.backgroundImage = `url(${animatedSrc}?t=${Date.now()})`;
+            }
+        });
+    }, { threshold: 0.5 }); // 50% näkyvissä
+
+    observer.observe(target);
+});
+
 
 window.addEventListener('scroll', animateOnScroll);
 animateOnScroll();
