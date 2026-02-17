@@ -72,6 +72,17 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(target);
 });
 
+// Mermaidin alustus
+document.addEventListener("DOMContentLoaded", () => {
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: "base",
+        themeVariables: {
+            fontSize: "20px",          // yleinen fonttikoko
+            fontFamily: "system-ui",   // halutessasi
+        }
+    });
+});
 
 window.addEventListener('scroll', animateOnScroll);
 animateOnScroll();

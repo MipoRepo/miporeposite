@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikko Pohjola | Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Mermaid CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <!-- Oma JS-tiedosto -->
+    <script src="script.js"></script>
 </head>
 <body>
     <nav>
@@ -32,7 +38,7 @@
             <h1>BACK "END" COUNTRY<br>WILL ALWAYS BE<br>MY HOME</h1>
             <p class="hero-tagline">Secure Architecture. Scalable Execution.</p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">LET'S TALK</a>
+                <a href="#contact" class="btn btn-primary">Let’s Work Together</a>
                 <a href="#about" class="btn btn-secondary">Why ICT? My story</a>
             </div>
         </div>
@@ -43,8 +49,8 @@
             <div class="about-content">
                 <div class="about-image"></div>
                 <div>
-                    <h4 class="section-title">About Me: Building Secure, Scalable Systems with Business Insight</h4>
-                    
+                    <h4 class="section-title">Building Secure, Scalable Systems with Business Insight</h4>
+                                        
                     <p class="about-text">I am deepening my expertise in modern, scalable and automation‑driven environments. 
                         I am building a technical foundation around DevOps, cloud infrastructure and AI‑assisted software development. 
                         I work with container‑based solutions, CI/CD pipelines and Infrastructure as Code to create development processes that are reliable and repeatable. 
@@ -127,97 +133,288 @@
     <section id="skills" class="skills">
         <div class="container">
             
-            <h2 class="section-title" style="text-align: center;">Recent Work & Achievements</h2>
+            <h2 class="section-title" style="text-align: center;">Skills, Learning & Projects</h2>
                        
             <div class="skills-grid">
+
                 <div class="skill-card">
                     <div class="skill-header">
                         <div>
-                            <h3 class="goal-title">Modern Software Engineering & DevOps</h3><br>
+
+                            <div class="framed-block">
+                                <h3 class="goal-title">Learning Path I:<br>Saranen Consulting, Code Bootcamp 2021<br></h3>
+                                    
+                                <blockquote class="fancy-quote">
+                                    The Code Bootcamp organized by Saranen Consulting provided me with a broad foundation in modern software development and prepared me for further studies in the field.
+                                </blockquote>
+                            </div>
+
                         </div>
                     </div>
-                    <p>My academic journey in Computer Software Engineering at JAMK University of Applied Sciences (2022–2025) has focused on modern software development, artificial intelligence, and infrastructure. I have gained hands-on experience in building scalable systems using Python, SQL, and Linux, while mastering Agile methodologies and DevOps practices.</p>
-                    <br>
-                    <p>Before my university studies, I built a technical foundation through an intensive Code Bootcamp in 2021. This provided me with a comprehensive understanding of the software development lifecycle—from design and version control with Git to automated workflows.<br></p>
-                    <p>Today, I leverage this background to bridge the gap between development and operations, specializing in containerized environments with Docker and cloud-based virtual machine infrastructures.</p>
+                                    
+                    <div class="text-block-skills">
+                        <hr><br>
+                        <p>
+                        The training focused primarily on Python and JavaScript, which were used to practice algorithmic thinking, object‑oriented programming, and building web applications.
+                        </p>
+
+                        <p>In addition to the main languages, we explored the fundamentals and core structures of other programming languages such as PHP, the C family, and Ruby to understand their use cases and strengths. 
+                        </p>
+
+                        <p>On the web development side, the program covered HTML, CSS libraries (including Bootstrap), jQuery, and modern Vue.js development.</p>
+
+                        <p>The Bootcamp also emphasized professional software engineering practices, including version control with GitHub, software testing, the basics of mobile development, and the use of cloud services.</p>
+                    </div>
                 </div>
                 
                 <div class="skill-card">
                     <div class="skill-header">
                         <div>
-                            <h3 class="goal-title">Backend project: Summary of the PrestaShop 2025</h3><br>
+
+                            <div class="framed-block">
+                                <h3 class="goal-title">Learning Path II:<br>JAMK Open University of Applied Sciences 2022-2024</h3>
+
+                                <blockquote class="fancy-quote">
+                                    During this study path, I strengthened my foundation in software development, cybersecurity, system administration, and modern ICT skills.
+                                </blockquote>
+                            </div>
+
                         </div>
                     </div>
-                    <p>Since June 2025, the PrestaShop project has focused on backend development and maintenance. The work has included setting up development and production environments on a Pouta Ubuntu virtual machine, building infrastructure with Docker and Docker Compose, and configuring GitLab CI/CD pipelines for automated deployment. 
-                       <br><br> All code is managed in GitLab, with CI/CD pipelines handling builds, testing, and production releases.<br><br></p>
-                    <a href="https://devletics-f01145.gitlab.io/">
-                      <img src="assets/img/team-logo.png" alt="Team logo" style="max-height:80px;">
-                    </a>
-                    <a href="https://prestashop-projektidokumentaatio-21a383.gitlab.io/">
-                      <img src="assets/img/Prestashop.svg.png" alt="Presta shop logo" style="max-height:80px;">
-                    </a>
+
+                    <div class="text-block-skills">
+                        <hr><br>
+
+                        <p>I strengthened my skills in Linux usage and administration,
+                        as well as version control with Git and GitLab. The curriculum covered Python programming and Web development.
+                        </p>
+                                        
+                        <p>I also studied networking fundamentals, including the OSI model and data flow across networks,
+                        which improved my understanding of protocols, network structure, and security across communication layers.
+                        </p>
+
+                        <p>
+                        Design thinking was a key part of the studies, emphasizing understanding user needs,
+                        identifying real problems, and creating practical human‑centered solutions.
+                        </p>
+
+                        <p>
+                        The coursework also included relational databases with SQL, strengthening my ability to structure data,
+                        write queries, and understand how information is stored and managed in modern systems
+                        </p>
+
+                        <strong>These studies sparked a growing interest in DevOps practices.</strong>
+                    </div>
+                </div>   
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div>
+
+                            <div class="framed-block">
+                                <h3 class="goal-title">Learning Path III:<br>JAMK University of Applied Sciences 2025</h3>
+
+                                <blockquote class="fancy-quote">
+                                    JAMK Modern AI‑powered Software Development Program, centered strongly on Agile and DevOps practices through hands‑on project work.
+                                </blockquote>
+                            </div>
+
+                        </div>
+                    </div>
+                                    
+                    <div class="text-block-skills">
+                        <hr><br>
+
+                        <p>
+                        The PrestaShop backend project provided practical experience in setting up development and production environments, containerizing services with Docker, and automating deployment pipelines using GitLab CI/CD. 
+                        Alongside this, Agile Scrum methods guided the team’s workflow through iterative sprints, continuous improvement, and clear task prioritization.
+                        </p>
+
+                        <p>
+                        Cloud services, infrastructure management, and operational reliability were integral parts of the work, reinforcing the DevOps mindset of combining development, automation, and maintenance. 
+                        The path also included applying AI tools to streamline workflows, improve documentation, and enhance development efficiency.
+                        </p>
+
+                        <p>
+                        Together, se experiences built a solid foundation in modern software development practices, where Agile teamwork and DevOps automation form the core of delivering reliable, scalable, and continuously improving solutions.
+                        </p>
+                    </div>
                 </div>
                 
                 <div class="skill-card">
                     <div class="skill-header">
                         <div>
-                            <h3 class="goal-title">Agile<br>Scrum</h3><br>
+
+                            <div class="framed-block">
+                                <h3 class="goal-title">Case I:<br>Department of ICT – City of Varkaus (2021)</h3>
+
+                                <blockquote class="fancy-quote">
+                                    In this role, I was responsible for managing daily IT support operations, administering 
+                                    Windows Server 2019 and Microsoft environments, also maintaining Active Directory and network services.
+                                </blockquote>
+                            </div>
+                            <hr><br>
+
                         </div>
                     </div>
-                    <p>From an Agile Scrum perspective, a software project progresses in short sprints, with the team focusing on prioritized tasks and delivering concrete features. 
-                        At the start of each sprint, goals and roles are defined, and retrospectives help the team improve processes and collaboration.
-                        Learning occurs through practical experience: the team identifies bottlenecks, tests new solutions, and applies best practices in subsequent sprints. 
-                        <br><br>This enables agile development, quality improvement, and rapid adaptation to changes.</p>
+
+                    <div class="text-block-skills">
+
+                        <strong>Roles:</strong>
+                        <ul style="padding-left:0; margin-left:8px;">
+                            <li style="margin-left:14px;"><strong>Helpdesk Management</strong> – Support ticket request handling, prioritization and troubleshooting.</li>
+                            <li style="margin-left:14px;"><strong>Network Device Installation &amp; Configuration</strong> – Deployment and management of network.</li>
+                            <li style="margin-left:14px;"><strong>Software Deployment</strong> – Application installations and updates across municipal departments.</li>
+                            <li style="margin-left:14px;"><strong>Windows Server 2019 Administration</strong> – Server management and maintenance.</li>
+                            <li style="margin-left:14px;"><strong>Active Directory Management</strong> – User accounts, device groups and registry, and Group Policy administration.</li>
+                            <li style="margin-left:14px;"><strong>Autodesk Main Administration</strong> – User management, access control and license maintenance.</li>
+                            <li style="margin-left:14px;"><strong>Microsoft Ecosystem Management</strong> – permissions, licensing and organizational system administration.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div>
+
+                            <div class="framed-block">
+                                <h3 class="goal-title">Case II:<br>Work-based learning in PrestaShop e‑commerce</h3>
+
+                                <blockquote class="fancy-quote">
+                                    The PrestaShop backend project provided hands‑on experience in building development and production environments.
+                                </blockquote>
+                            </div>
+                            <hr><br>
+                        </div>
+                    </div>
+
+                    <div class="text-block-skills">
+
+                        <p>Agile Scrum guided the team through iterative sprints and steady improvement.</p>
+
+                        <p>Services were containerized with Docker, and deployment pipelines were automated using GitLab CI/CD.</p>
+
+                        <p>A cloud‑based backend on CSC Pouta supported the work by offering scalable, secure, and isolated environments for modern DevOps practices.</p>
+
+                        <strong>Project Technologies:</strong>
+                        <div>
+                            <ul>
+                                <li style="margin-left:14px;"><strong>Agile Scrum:</strong> Project management framework</li>
+                                <li style="margin-left:14px;"><strong>PrestaShop:</strong> E-commerce platform</li>
+                                <li style="margin-left:14px;"><strong>Infrastructure as Code (IaC):</strong> Managing infra via code</li>
+                                <li style="margin-left:14px;"><strong>CSC Pouta:</strong> IaaS cloud backend</li>
+                                <li style="margin-left:14px;"><strong>Linux servers:</strong> OS management</li>
+                                <li style="margin-left:14px;"><strong>Docker & Docker Compose:</strong> Containerization</li>
+                                <li style="margin-left:14px;"><strong>Kubernetes:</strong> Container orchestration</li>
+                                <li style="margin-left:14px;"><strong>Terraform / Ansible:</strong> Provisioning & config automation</li>
+                                <li style="margin-left:14px;"><strong>Nginx / Apache:</strong> Web servers</li>
+                                <li style="margin-left:14px;"><strong>MySQL:</strong> Database management</li>
+                                <li style="margin-left:14px;"><strong>Git:</strong> Version control</li>
+                                <li style="margin-left:14px;"><strong>GitLab CI/CD:</strong> Automated pipelines</li>
+                                <li style="margin-left:14px;"><strong>YAML:</strong> Configuration standard</li>
+                                <li style="margin-left:14px;"><strong>GitLab Secrets Management:</strong> Secure credential handling</li>
+                                <li style="margin-left:14px;"><strong>API & REST:</strong> Interface principles</li>
+                                <li style="margin-left:14px;"><strong>Robot Framework:</strong> Test automation</li>
+                                <li style="margin-left:14px;"><strong>SSL/TLS:</strong> Encryption & certificates</li>
+                                <li style="margin-left:14px;"><strong>OWASP Hardening:</strong> Security best practices</li>
+                                <li style="margin-left:14px;"><strong>Fail2ban:</strong> Intrusion prevention</li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
                 
                 <div class="skill-card">
                     <div class="skill-header">
                         <div>
-                            <h3 class="goal-title">Cloud Services</h3><br><br>
+
+                            <div class="framed-block">
+                                <h3 class="goal-title">Case III:<br>Personal Learning and Project‑Driven Development</h3>
+
+                                <blockquote class="fancy-quote">
+                                    Focuses on applying modern engineering practices through hands‑on learning 
+                                    and continuous improvement.
+                                </blockquote>
+                            </div>
+                            <hr><br>
                         </div>
                     </div>
-                    <p>Deploying and managing applications on cloud platforms with scalable architecture. </p>
-                    <p>CSC cloud services consist of Pouta hardware virtualization service, Rahti application containerization service, 
-                        Pukki database-as-a-service (DBaaS) and Noppe cloud platform.</p><br>
-                        <a href="https://research.csc.fi/" target="_blank" rel="noopener noreferrer" style="background-color: white; color: black;">Services for Research — CSC</a>
+
+                    <div class="text-block-skills">
+                        
+                        <p>
+                            <br><strong>RepoStage </strong>provides a structured base for experimenting,
+                            learning, and documenting modern engineering practices, offering a transparent and scalable environment for testing and improving workflows, automation, and technical choices.
+                        </p>
+
+                        <a href="https://repostage-docs-8ba5a1.gitlab.io/" target="_blank" rel="noopener" style="color:#ffffff;">
+                            <strong>RepoStage</strong><br>
+                        </a>
+
+                        <br><hr><br>
+
+                        <p>
+                            <strong>The Director’s Way Into DevSecOps</strong> is a practical framework I created to guide continuous development and improvement,
+                            supporting both organizational practices and my own technical growth journey.
+                        </p>
+
+                        <p>
+                            <a href="https://study-devsecops-the-directors-way-8bfa25.gitlab.io/" target="_blank" rel="noopener" style="color:#ffffff;">
+                                <strong>The Director’s Way</strong>
+                            </a><br><br>
+                        </p>
+
+                    </div>
                 </div>
                 
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div>
-                            <h3 class="goal-title">DevOps</h3><br><br>
-                        </div>
-                    </div>
-                    <p>Agile Scrum focuses on iterative development and team collaboration, while DevOps integrates development and operational maintenance, enabling continuous integration, testing, and delivery (CI/CD).
-                        For example, in a PrestaShop project, DevOps practices support sprint goals by automating builds, tests, and deployment processes, as well as ensuring service monitoring and recovery in case of disruptions. 
-                        <br><br>This allows the team to practically combine development, testing, and production management, improving quality and accelerating response to changes.</p>
-                </div>
                 
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div>
-                            <h3 class="goal-title">AI Integration & Workflow Optimization</h3><br>
-                        </div>
-                    </div>
-                    <p>Generative AI is a cornerstone of my professional toolkit. I specialize in integrating tools like GitHub Copilot and ChatGPT into the software development lifecycle to accelerate problem-solving and automate routine tasks. By leveraging these technologies, I streamline documentation, enhance testing workflows, and build more efficient, customer-oriented solutions.</p>
-                    <br>
-                    <p>AI is no longer just a technological concept — it’s a practical tool I use daily as part of my ICT expertise.<br></p>
-                    <br>
-                    <a href="https://repostage-docs-8ba5a1.gitlab.io/"><img src="assets/img/logo-rs.png" alt="Logo" style="max-height: 70px; border-radius: 10px;"></a>
-                </div>
             </div>
+
+            <BR>
+            <blockquote class="fancy-quote">
+                    Today, I use this background to bridge Dev and Ops with a growing focus on secure‑by‑design DevSecOps practices.
+            </blockquote>
+
         </div>
     </section>
 
     <section id="studies" class="studies">
       <div class="container">
-        <h5 class="section-title">My work experience can be found on LinkedIn</h5>
-        <div class="linkedin-wrapper">
-          <a class="linkedin-link" href="https://www.linkedin.com/in/mikko-pohjola-miporepo/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" class="linkedin-logo">
-            <span>Visit my Linkedin page </span>
-          </a>
+        <h5 class="section-title">My Work Experience: Overview</h5>
+        
+        <div class="mermaid">
+            flowchart LR
+
+            subgraph CareerTimeline ["Career Timeline 1995–2025"]
+
+                %% --- 1990s ---
+                A1["Insurance Customer Service Agent<br>Varkaus, Espoo 1995–1998"]
+                A2["Call Center Manager Deputyship<br>Kuopio 1998"]
+                A3["Insurance Customer Service Agent<br>Kuopio 1998"]
+                A4["Sales Manager<br>Kuopio 1999–2000"]
+
+                %% --- 2000s ---
+                B1["Sales Team Lead<br>Sampo If 2000–2005"]
+                B2["Insurance Broker<br>AIM-Meklaritalo Oy 2006–2009"]
+                B3["Sales Manager<br>OP Financial Group 2010–2013"]
+                B4["Insurance Broker<br>Meklaritalo Pohjola Oy 2013–2018"]
+
+                %% --- Career Transition ---
+                C1["IT Support Specialist<br>ICT Department, City of Varkaus 2021–2022"]
+                C2["Entrepreneur<br>Ruuttitech, Web development 2022–2023"]
+                C3["Software Student<br>Saranen and JAMK 2021–2025"]
+                C4["DevOps Intern<br>JAMK 2025"]
+
+            end
+
+            %% Yhteydet aikajärjestyksessä
+            A1 --> A2 --> A3 --> A4 
+            B1 --> B2 --> B3 --> B4 
+            C1 --> C2 --> C3 --> C4
+
         </div>
+
       </div>
     </section>
 
@@ -232,6 +429,12 @@
                         <a href="https://github.com/MipoRepo" target="_blank" style="text-decoration: none; font-weight: 600;">Link: GitHub</a><br>
                         <a href="https://gitlab.com/users/MipoRepo/projects" target="_blank" style="text-decoration: none; font-weight: 600;">Link: GitLab</a>
                     </div>
+                    <div class="linkedin-wrapper">
+          <a class="linkedin-link" href="https://www.linkedin.com/in/mikko-pohjola-miporepo/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" class="linkedin-logo">
+            <span>Visit my Linkedin page </span>
+          </a>
+        </div>
                     <div class="contact-item">
                         <strong>Location:</strong><br>
                         Jyväskylä, Finland

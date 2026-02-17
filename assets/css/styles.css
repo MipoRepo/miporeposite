@@ -17,6 +17,15 @@ body {
     padding: 0 20px;
 }
 
+.fancy-quote {
+    border-left: 4px solid #ff6b35;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #f0f0f0;
+}
+
+
 /*-------------------------------*/
 /* Navigation */
 /*-------------------------------*/
@@ -123,8 +132,9 @@ nav .container {
     animation: fadeInUp 1.5s ease-out 1.0s both;
 }
 /*-------------------------------*/
-/* Keyframes */
+/* Keyframes for Hero section */
 /*-------------------------------*/
+
 @keyframes panoramaZoomOut {
     0% {
         /* Alussa kuva on lähellä ja kallellaan vasemmalle */
@@ -158,8 +168,9 @@ nav .container {
 }
 
 /*-------------------------------*/
-/* Sections */
+/* About & universal */
 /*-------------------------------*/
+
 .about, .goals, .skills, .contact, .studies {
     position: relative;
     z-index: 10;
@@ -190,92 +201,13 @@ nav .container {
 }
 
 /*--------------------------------------------------------------*/
-/* Kortit: GRIDIT (MAX 3), VÄRIT JA HEIJASTUS      */
+/* Kortit: GRIDIT (MAX 3 leveyssuunta)  */
 /*--------------------------------------------------------------*/
 
-/* 1. SKILLS-OSIO (Tumma tausta) */
-.skills h1, 
-.skills h2, 
-.skills h3,
-.skills .skill-title,
-.skills .section-title {
-    color: #ffffff !important;
-}
+/*-------------------------------*/
+/* GOALS-OSIO (Vaalea tausta)  */
+/*-------------------------------*/
 
-.skills {
-    padding: 100px 0;
-    background: #1a1a1a !important;
-    color: white !important;
-}
-
-.skills-grid {
-    display: grid !important;
-    /* Asetetaan max 3 vierekkäin desktopilla, mutta joustavasti tilan mukaan */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 30px !important;
-    margin-top: 50px;
-    width: 100%;
-    max-width: 1200px; /* Estää liian leveäksi venymisen */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Rajoitetaan sarakkeet tasan kolmeen isoilla näytöillä */
-@media (min-width: 1024px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-}
-
-.skill-card {
-    background: linear-gradient(135deg, #333, #444) !important; /* Alkuperäinen tumma väri */
-    padding: 30px;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    z-index: 1;
-    color: white !important;
-}
-
-/* Oranssi heijastus (Vain Skill-kortille) */
-.skill-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -150%; 
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg, 
-        transparent, 
-        rgba(255, 107, 53, 0.1), 
-        rgba(255, 107, 53, 0.4), /* Oranssi välähdys */
-        rgba(255, 107, 53, 0.1), 
-        transparent
-    );
-    transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-    z-index: 2;
-    pointer-events: none;
-}
-
-.skill-card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7) !important;
-}
-
-.skill-card:hover::before {
-    left: 150%;
-}
-
-/* Teksti heijastuksen päälle */
-.skill-card > * {
-    position: relative;
-    z-index: 3;
-}
-
-/* 2. GOALS-OSIO (Vaalea tausta) */
 .goals {
     padding: 100px 0;
     background: #fffaef !important; /* Vaalea osion tausta */
@@ -306,46 +238,8 @@ nav .container {
 }
 
 /*-------------------------------*/
-/* Single-column layout for text-only sections */
+/* Roadmap Section */
 /*-------------------------------*/
-
-.single-column {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: left;
-}
-
-/* General text block styling */
-.text-block {
-    margin-bottom: 25px;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    /* Muutettu valkoiseksi, jotta se erottuu tummemmasta lasitaustasta */
-    color: rgba(255, 255, 255, 0.9); 
-}
-
-.goal-title {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.single-column-card {
-    /* Glassmorphism-tehoste */
-    background: rgba(255, 255, 255, 0.1); /* Erittäin läpinäkyvä valkoinen */
-    backdrop-filter: blur(15px);          /* Tämä tekee lasimaisen sumennuksen */
-    -webkit-backdrop-filter: blur(15px);  /* Tuki Safarille */
-    
-    /* Reuna ja varjo tuovat syvyyttä */
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    
-    color: white; /* Teksti valkoiseksi */
-    padding: 60px 40px;
-    border-radius: 20px; /* Hieman pyöreämmät kulmat sopivat tyyliin paremmin */
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 .roadmap {
     /* Voimakkaampi liukuväri, jotta lasiefekti korostuu */
@@ -403,6 +297,244 @@ nav .container {
     border-bottom-color: #ff6b35;
     transform: translateY(-2px);
 }
+
+/*-------------------------------*/
+/* SKILLS-OSIO (Tumma tausta)  */
+/*-------------------------------*/
+
+.skills h1, 
+.skills h2, 
+.skills h3,
+.skills .skill-title,
+.skills .section-title {
+    color: #ffffff !important;
+}
+
+.skills {
+    padding: 100px 0;
+    background: #1a1a1a !important;
+    color: white !important;
+}
+
+.skills-grid {
+    display: grid !important;
+    /* Asetetaan max 3 vierekkäin desktopilla, mutta joustavasti tilan mukaan */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1200px; /* Estää liian leveäksi venymisen */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-card {
+    background: linear-gradient(135deg, #333, #444) !important; /* Alkuperäinen tumma väri */
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+    color: white !important;
+}
+
+.text-block-skills p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* Oranssi heijastus (Vain Skill-kortille) */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%; 
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg, 
+        transparent, 
+        rgba(255, 107, 53, 0.1), 
+        rgba(255, 107, 53, 0.4), /* Oranssi välähdys */
+        rgba(255, 107, 53, 0.1), 
+        transparent
+    );
+    transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7) !important;
+}
+
+.skill-card:hover::before {
+    left: 150%;
+}
+
+/* Teksti heijastuksen päälle */
+.skill-card > * {
+    position: relative;
+    z-index: 3;
+}
+
+.framed-block {
+    border: 1px solid rgba(255, 255, 255, 0.846); /* ohut vaalea kehys */
+    border-radius: 10px;                         /* pyöristetyt kulmat */
+    padding: 20px;
+    margin-bottom: 25px;
+    background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
+    min-height: 350px; /* skill korttien selitteen minikorkeus */
+}
+
+
+/* Rajoitetaan sarakkeet tasan kolmeen isoilla näytöillä */
+@media (min-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/*-------------------------------*/
+/* Single-column layout for text-only sections and themplare for new layouts*/
+/*-------------------------------*/
+
+.single-column {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* General text block styling */
+.text-block {
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    /* Muutettu valkoiseksi, jotta se erottuu tummemmasta lasitaustasta */
+    color: rgba(255, 255, 255, 0.9); 
+}
+
+.goal-title {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.single-column-card {
+    /* Glassmorphism-tehoste */
+    background: rgba(255, 255, 255, 0.1); /* Erittäin läpinäkyvä valkoinen */
+    backdrop-filter: blur(15px);          /* Tämä tekee lasimaisen sumennuksen */
+    -webkit-backdrop-filter: blur(15px);  /* Tuki Safarille */
+    
+    /* Reuna ja varjo tuovat syvyyttä */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    
+    color: white; /* Teksti valkoiseksi */
+    padding: 60px 40px;
+    border-radius: 20px; /* Hieman pyöreämmät kulmat sopivat tyyliin paremmin */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ------------------------------ */
+/* Mermaid Flowchart Styling      */
+/* ------------------------------ */
+
+/* Yleinen fonttikoko ja bold */
+.mermaid svg text {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    fill: #ffffff !important;
+}
+
+/* ------------------------------ */
+/* SUBGRAPH (ULKOLAATIKKO)        */
+/* ------------------------------ */
+
+/* Subgraphin taustalaatikko */
+.mermaid .cluster rect {
+    rx: 14px !important;
+    ry: 14px !important;
+    fill: rgba(255, 255, 255, 0.10) !important;
+    stroke: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Subgraph-otsikon foreignObject → div */
+.mermaid .cluster foreignObject > div {
+    position: relative;
+    z-index: 999 !important;
+    font-size: 0px !important;
+    font-weight: 0 !important;
+    color: #ffffff !important;
+    text-align: center;
+}
+
+/* Estää otsikon jäämisen solujen alle */
+.mermaid .cluster foreignObject {
+    pointer-events: none;
+}
+
+/* ------------------------------ */
+/* SOLUT                          */
+/* ------------------------------ */
+
+.mermaid .node rect {
+    fill: rgba(255, 255, 255, 0.15) !important;
+    stroke: #ffffff !important;
+    stroke-width: 2px !important;
+    rx: 14px !important;
+    ry: 14px !important;
+    backdrop-filter: blur(6px);
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------------------------ */
+/* NUOLET                         */
+/* ------------------------------ */
+
+.mermaid .edgePath path {
+    stroke: #fffaf5 !important;
+    stroke-width: 4px !important;
+}
+
+.mermaid .node.spacer rect {
+    fill: none !important;
+    stroke: none !important;
+}
+
+.mermaid .node.spacer text {
+    fill: none !important;
+}
+
+.mermaid .edgeLabel {
+    fill: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+/* ------------------------------ */
+/* HOVER                          */
+/* ------------------------------ */
+
+.mermaid .node:hover rect {
+    fill: rgba(255, 255, 255, 0.25) !important;
+    stroke: #ff9a56 !important;
+    transition: 0.25s ease;
+}
+
+/* Piilota kaikki subgraph-otsikot */
+.mermaid .cluster .label {
+    display: none !important;
+}
+
+
+
+
 /*-------------------------------*/
 /* LinkedIn Section */
 /*-------------------------------*/
@@ -504,14 +636,27 @@ nav .container {
 }
 
 .btn-secondary {
-    background: transparent;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+    align-items: center;
+    display: inline-flex;
+
+    background: rgba(255, 255, 255, 0.01); /* läpikuultava */
+    backdrop-filter: blur(3px);           /* lasimainen efekti */
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.35);
     color: white;
-    border: 2px solid white;
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #333;
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    transform: translateY(-2px);
 }
 
 /*-------------------------------*/
