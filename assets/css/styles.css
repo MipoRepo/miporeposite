@@ -398,7 +398,7 @@ nav .container {
     padding: 20px;
     margin-bottom: 25px;
     background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
-    min-height: 340px; /* skill korttien selitteen minikorkeus */
+    min-height: 350px; /* skill korttien selitteen minikorkeus */
 }
 
 /* Rajoitetaan sarakkeet tasan kolmeen isoilla näytöillä */
