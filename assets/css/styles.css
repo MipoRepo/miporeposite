@@ -168,7 +168,7 @@ nav .container {
 }
 
 /*-------------------------------*/
-/* About & universal */
+/* About & universal purpose*/
 /*-------------------------------*/
 
 .about, .goals, .skills, .contact, .studies {
@@ -387,8 +387,10 @@ nav .container {
     padding: 20px;
     margin-bottom: 25px;
     background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
-    min-height: 380px; /* skill korttien selitteen minikorkeus */
+    min-height: 320px; /* skill korttien selitteen minikorkeus */
 }
+
+/* Erillinen luokka, jos halutaan hieman korkeampi kortti (esim. selitteille) */
 
 .framed-block-case {
     border: 1px solid rgba(255, 255, 255, 0.846); /* ohut vaalea kehys */
@@ -396,7 +398,7 @@ nav .container {
     padding: 20px;
     margin-bottom: 25px;
     background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
-    min-height: 430px; /* skill korttien selitteen minikorkeus */
+    min-height: 340px; /* skill korttien selitteen minikorkeus */
 }
 
 /* Rajoitetaan sarakkeet tasan kolmeen isoilla näytöillä */
