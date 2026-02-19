@@ -79,6 +79,48 @@ nav .container {
 }
 
 /*-------------------------------*/
+/* Section Navigation Icons */
+/*-------------------------------*/
+
+.section-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Värit vaaleille osioille */
+.about .nav-icon, .goals .nav-icon {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-icon:hover {
+    background: #ff6b35;
+    color: white !important;
+    transform: translateY(-3px);
+    border-color: #ff6b35;
+}
+/*-------------------------------*/
 /* Hero Section */
 /*-------------------------------*/
 .hero {
@@ -398,7 +440,7 @@ nav .container {
     padding: 20px;
     margin-bottom: 25px;
     background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
-    min-height: 350px; /* skill korttien selitteen minikorkeus */
+    min-height: 30px; /* skill korttien selitteen minikorkeus */
 }
 
 /* Rajoitetaan sarakkeet tasan kolmeen isoilla näytöillä */
