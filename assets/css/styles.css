@@ -124,7 +124,7 @@ nav .container {
 /* Hero Section */
 /*-------------------------------*/
 .hero {
-    height: 55vh;
+    height: 75vh;
     width: 100vw;
     position: relative;
     overflow: hidden; 
@@ -143,7 +143,7 @@ nav .container {
     top: 0;
     left: 0;
     width: 100%;
-    height: 55vh;
+    height: 75vh;
     background: linear-gradient(135deg, 
         rgba(0, 0, 0, 0.65), 
         rgba(0, 0, 0, 0.15)), 
