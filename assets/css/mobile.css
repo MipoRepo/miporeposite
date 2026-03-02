@@ -172,6 +172,12 @@
     }
 
     /* 2. MUUT TILAAN LIITTYVÄT SÄÄDÖT */
+
+    /* Learning ja Skills-osion tekstit */
+    .text-block-skills {
+        display: none;
+    }
+
     /* FINAL STATEMENTIN NORMALISOINTI */
     .final-statement {
         font-size: 1rem !important;    /* Muutettu 1.3rem -> 1rem (normaali koko) */
