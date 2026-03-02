@@ -1029,6 +1029,24 @@ footer img:hover {
     }
 
     /* 2. MUUT TILAAN LIITTYVÄT SÄÄDÖT */
+    /* FINAL STATEMENTIN NORMALISOINTI */
+    .final-statement {
+        font-size: 1rem !important;    /* Muutettu 1.3rem -> 1rem (normaali koko) */
+        font-weight: normal !important; /* Poistettu boldaus */
+        margin: 20px !important;        /* Pienennetty suuret 64px marginaalit */
+        line-height: 1.6;
+        text-align: left !important;
+    }
+
+    .final-statement p {
+        margin-bottom: 0;
+    }
+
+    /* Varmistetaan että teksti ei huku taustaan */
+    .final-statement {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
     /* HOBBY IMAGEN POISTO */
     .hobby-image {
         display: none !important; /* Poistaa hobby-kuvan kokonaan mobiilissa */
