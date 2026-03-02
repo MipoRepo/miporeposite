@@ -859,21 +859,27 @@ footer img:hover {
 
 @media (max-width: 768px) {
     /* 1. NAVIGOINTI & LOGO */
+    /* NAVIGAATION TAUSTAN POISTO */
+    nav {
+        background: none !important; /* Poistaa mustan yläpalkin */
+        position: absolute; /* Estää varaamasta tilaa sivun yläreunassa */
+    }
+
     .logo-wrapper, 
     .logo-image {
         display: none !important; /* Poistaa logon ja sen kääreen näkyvistä */
     }
 
     .mobile-menu-toggle {
-        display: flex !important; /* Näytetään hampurilaispainike */
-        flex-direction: column;
-        gap: 6px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
+        display: flex !important;
+        position: fixed; /* Kelluu päällä */
+        left: 15px;      /* Siirretty oikealta vasemmalle */
+        top: 10px;
         z-index: 1200;
-        margin-left: auto;
+        margin-left: 0;
+        background: rgba(0, 0, 0, 0.5); /* Lisätty tausta näkyvyyden parantamiseksi */
+        padding: 8px;
+        border-radius: 4px;
     }
 
     .mobile-menu-toggle span {
@@ -994,6 +1000,42 @@ footer img:hover {
         width: 100px !important;
         height: 100px !important;
         margin-left: 0;
+    }
+
+    /* ROADMAPIN PUHDISTUS */
+    .roadmap-image {
+        display: none !important; /* Poistaa kuvan kokonaan */
+    }
+
+    .roadmap-content {
+        display: block !important; /* Vaihdetaan grid -> block, jotta kuvan sarake häviää */
+        padding: 0 20px;           /* Vain sivuille tilaa tekstille */
+        grid-template-columns: 1fr !important; /* Varmistus grid-rakenteelle */
+    }
+
+    .roadmap-text {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    /* Varmistetaan linkin näkyvyys ja asettelu */
+    .roadmap-text a {
+        display: inline-block !important;
+        margin-top: 20px;
+        line-height: 1.4;
+    }
+
+    /* 2. MUUT TILAAN LIITTYVÄT SÄÄDÖT */
+    /* HOBBY IMAGEN POISTO */
+    .hobby-image {
+        display: none !important; /* Poistaa hobby-kuvan kokonaan mobiilissa */
+    }
+
+    .cartoon-section {
+        padding: 0 !important;   /* Poistetaan pehmusteet, jos osio jää tyhjäksi */
+        min-height: 0 !important;
     }
 
     /* 6. SKILLS-ERIKOISUUDET */
