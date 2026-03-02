@@ -44,6 +44,13 @@ nav .container {
     align-items: center;
 }
 
+.mobile-menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
 .logo-wrapper {
     position: fixed;
     top: 5px;
@@ -898,7 +905,7 @@ footer img:hover {
 
     /* 2. HERO-OSIO (Header kuva ja tekstit) */
     .hero {
-        height: 50vh !important; /* Madallettu mobiilille */
+        height: 55vh !important; /* Madallettu mobiilille */
         display: flex;
         align-items: center;
         justify-content: flex-start; /* Sisältö alkaa vasemmalta */
@@ -916,13 +923,13 @@ footer img:hover {
 
     .hero-content {
         text-align: left !important;
-        padding: 0 25px;
+        padding: 0 25px 0 25px !important; /* Lisää vasemman ja oikean reunan paddingia */
         width: 100%;
     }
 
     .hero-content h1 { 
         font-size: 1.8rem !important; 
-        line-height: 1.4;
+        line-height: 1.3;
         margin-bottom: 15px;
         text-align: left !important;
     }
@@ -935,18 +942,18 @@ footer img:hover {
 
     /* 3. BUTTONIT (Pienennetty koko) */
     .btn {
-        padding: 12px 24px !important;
-        font-size: 0.9rem !important;
-        width: 100%;
-        max-width: 220px;
+        padding: 10px 20px !important;
+        font-size: 0.85rem !important;
+        width: auto;
+        max-width: 160px;
         text-align: center;
     }
 
     .cta-buttons {
         flex-direction: column;
         gap: 12px;
-        align-items: flex-start; /* Napit vasempaan reunaan */
-        justify-content: flex-start;
+        align-items: center /* Napit vasempaan reunaan */
+        justify-content: center;
     }
 
     /* 4. YLEINEN ASETTELU & TASAUKSET */
@@ -979,7 +986,7 @@ footer img:hover {
     .about-image { 
         width: 150px !important; 
         height: 150px !important;
-        margin: 0 0 25px 0 !important; /* Siirretty vasempaan */
+        margin: 0 auto 25px auto !important; /* Siirretty vasempaan */
     }
 
     .me-image {
@@ -995,6 +1002,51 @@ footer img:hover {
 
     .skill-card, .goal-card {
         padding: 20px !important;
+    }
+    
+    /* 7a. YHTEYDENOTTOLOMAKKEEN TASAUS */
+    .contact-content {
+        grid-template-columns: 1fr !important;
+        text-align: left !important; /* Pakotetaan tekstin tasaus vasemmalle */
+        padding: 0 20px;
+    }
+
+    .contact-form {
+        padding: 30px 20px !important; /* Hieman tiiviimpi mobiilissa */
+        text-align: left !important;
+    }
+
+    .form-group {
+        text-align: left !important;
+    }
+
+    .form-group label {
+        display: block;
+        text-align: left !important;
+        margin-bottom: 5px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr !important; /* Kentät allekkain */
+        gap: 0; /* Poistetaan ylimääräinen väli, jos marginaalit hoitavat sen */
+    }
+
+    /* Varmistetaan, että lähetysnappi ei pakottaudu keskelle */
+    .contact-form .btn {
+        align-self: flex-start; 
+        margin-left: 0;
+    }
+
+    /* Harrastus kuvan keskitys */
+    .hobby-image {
+        width: 100% !important; /* Nostetaan leveys 70% -> 100% */
+        margin: 10px 0 !important; /* Poistetaan automaattinen keskitysreuna sivuilta */
+        aspect-ratio: 3049 / 297; /* Pidetään alkuperäinen kuvasuhde */
+        background-size: contain;
+    }
+
+    .cartoon-section {
+        padding: 10px 10px !important; /* Pienennetään osion sisäreunusta, jotta kuva saa tilaa */
     }
 
     /* 7. FOOTER & TEKNOLOGIA-IKONIT */
