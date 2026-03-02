@@ -1,0 +1,285 @@
+/*-------------------------------*/
+/* Mobile */
+/*-------------------------------*/
+
+@media (max-width: 768px) {
+    /* 1. NAVIGOINTI & LOGO */
+    /* NAVIGAATION TAUSTAN POISTO */
+    nav {
+        background: none !important; /* Poistaa mustan yläpalkin */
+        position: absolute; /* Estää varaamasta tilaa sivun yläreunassa */
+    }
+
+    .logo-wrapper, 
+    .logo-image {
+        display: none !important; /* Poistaa logon ja sen kääreen näkyvistä */
+    }
+
+    .mobile-menu-toggle {
+        display: flex !important;
+        position: fixed; /* Kelluu päällä */
+        left: 12px;      /* Siirretty oikealta vasemmalle */
+        top: 12px;
+        z-index: 1200;
+        margin-left: 0;
+        background: rgba(0, 0, 0, 0.5); /* Lisätty tausta näkyvyyden parantamiseksi */
+        padding: 8px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        scale: 0.8; /* Pienentää koko nappia suhteessa alkuperäiseen */
+    }
+
+    .mobile-menu-toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Piilossa oikealla */
+        width: 75%;
+        height: 100vh;
+        background: #111;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        z-index: 1100;
+        padding-right: 0 !important; /* Poistetaan aiempi 40px padding */
+    }
+
+    .nav-links.active {
+        right: 0; /* Valikko liukuu esiin */
+    }
+
+    /* 2. HERO-OSIO (Header kuva ja tekstit) */
+    .hero {
+        height: 55vh !important; /* Madallettu mobiilille */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Sisältö alkaa vasemmalta */
+    }
+
+    .hero::after {
+        position: absolute;
+        height: 100%;
+        background-attachment: scroll !important;
+        background-size: cover !important; /* Hallitsee 2500px kuvan */
+        background-position: center top !important;
+        animation: none !important; /* Poistettu raskas zoom */
+        transform: scale(1) !important;
+    }
+
+    .hero-content {
+        text-align: left !important;
+        padding: 10px 25px 0 25px !important; /* Lisää vasemman ja oikean reunan paddingia */
+        width: 100%;
+    }
+
+    .hero-content h1 { 
+        font-size: 1.8rem !important; 
+        line-height: 1.3;
+        margin-bottom: 15px;
+        text-align: left !important;
+    }
+
+    .hero-tagline {
+        font-size: 0.95rem !important;
+        text-align: left !important;
+        margin-bottom: 20px;
+    }
+
+    /* 3. BUTTONIT (Pienennetty koko) */
+    .btn {
+        padding: 7px 14px !important;
+        font-size: 0.8rem !important;
+        width: auto;
+        max-width: 130px;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center /* keskelle */
+    }
+
+    /* 4. YLEINEN ASETTELU & TASAUKSET */
+    .about, .goals, .skills, .contact, .studies {
+        padding: 60px 0 !important;
+    }
+
+    .section-title {
+        font-size: 1.7rem !important;
+        text-align: left !important;
+        padding-left: 20px;
+    }
+
+    .about-content, 
+    .contact-content, 
+    .skills-grid, 
+    .goals-grid, 
+    .form-row,
+    .single-column-card { 
+        grid-template-columns: 1fr !important; 
+        text-align: left !important;
+        padding: 0 20px;
+    }
+
+    p, .text-block, .text-block-light {
+        text-align: left !important;
+    }
+
+    /* 5. KUVAT (Pienennetty reilusti) */
+    .about-image { 
+        width: 150px !important; 
+        height: 150px !important;
+        margin: 0 auto 25px auto !important; /* Siirretty vasempaan */
+    }
+
+    .me-image {
+        width: 100px !important;
+        height: 100px !important;
+        margin-left: 0;
+    }
+
+    /* ROADMAPIN PUHDISTUS */
+    .roadmap-image {
+        display: none !important; /* Poistaa kuvan kokonaan */
+    }
+
+    .roadmap-content {
+        display: block !important; /* Vaihdetaan grid -> block, jotta kuvan sarake häviää */
+        padding: 0 20px;           /* Vain sivuille tilaa tekstille */
+        grid-template-columns: 1fr !important; /* Varmistus grid-rakenteelle */
+    }
+
+    .roadmap-text {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    /* Varmistetaan linkin näkyvyys ja asettelu */
+    .roadmap-text a {
+        display: inline-block !important;
+        margin-top: 20px;
+        line-height: 1.4;
+    }
+
+    /* 2. MUUT TILAAN LIITTYVÄT SÄÄDÖT */
+    /* FINAL STATEMENTIN NORMALISOINTI */
+    .final-statement {
+        font-size: 1rem !important;    /* Muutettu 1.3rem -> 1rem (normaali koko) */
+        font-weight: normal !important; /* Poistettu boldaus */
+        margin: 20px !important;        /* Pienennetty suuret 64px marginaalit */
+        line-height: 1.6;
+        text-align: left !important;
+    }
+
+    .final-statement p {
+        margin-bottom: 0;
+    }
+
+    /* Varmistetaan että teksti ei huku taustaan */
+    .final-statement {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    /* HOBBY IMAGEN POISTO */
+    .hobby-image {
+        display: none !important; /* Poistaa hobby-kuvan kokonaan mobiilissa */
+    }
+
+    .cartoon-section {
+        padding: 0 !important;   /* Poistetaan pehmusteet, jos osio jää tyhjäksi */
+        min-height: 0 !important;
+    }
+
+    /* 6. SKILLS-ERIKOISUUDET */
+    .skill-card::before {
+        display: none; /* Heijastus pois tehojen säästämiseksi */
+    }
+
+    .skill-card, .goal-card {
+        padding: 20px !important;
+    }
+    
+    /* 7a. YHTEYDENOTTOLOMAKKEEN TASAUS */
+    .contact-content {
+        grid-template-columns: 1fr !important;
+        text-align: left !important; /* Pakotetaan tekstin tasaus vasemmalle */
+        padding: 0 20px;
+    }
+
+    .contact-form {
+        padding: 30px 20px !important; /* Hieman tiiviimpi mobiilissa */
+        text-align: left !important;
+    }
+
+    .form-group {
+        text-align: left !important;
+    }
+
+    .form-group label {
+        display: block;
+        text-align: left !important;
+        margin-bottom: 5px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr !important; /* Kentät allekkain */
+        gap: 0; /* Poistetaan ylimääräinen väli, jos marginaalit hoitavat sen */
+    }
+
+    /* Varmistetaan, että lähetysnappi ei pakottaudu keskelle */
+    .contact-form .btn {
+        align-self: flex-start; 
+        margin-left: 0;
+    }
+
+    /* Harrastus kuvan keskitys */
+    .hobby-image {
+        width: 100% !important; /* Nostetaan leveys 70% -> 100% */
+        margin: 10px 0 !important; /* Poistetaan automaattinen keskitysreuna sivuilta */
+        aspect-ratio: 3049 / 297; /* Pidetään alkuperäinen kuvasuhde */
+        background-size: contain;
+    }
+
+    .cartoon-section {
+        padding: 10px 10px !important; /* Pienennetään osion sisäreunusta, jotta kuva saa tilaa */
+    }
+
+    /* 7. FOOTER & TEKNOLOGIA-IKONIT */
+    footer {
+        padding: 40px 0 20px 0;
+    }
+
+    footer .container:first-child {
+        justify-content: flex-start !important; /* Ikonit alkamaan vasemmalta */
+        gap: 12px;
+        padding: 0 20px;
+    }
+
+    footer img {
+        max-height: 22px !important; /* Kutistettu ikonit */
+        width: auto;
+    }
+
+    /* Hampurilaisanimaatio (X-muoto kun auki) */
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
