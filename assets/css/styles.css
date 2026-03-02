@@ -859,8 +859,9 @@ footer img:hover {
 
 @media (max-width: 768px) {
     /* 1. NAVIGOINTI & LOGO */
-    .logo-wrapper {
-        display: none !important; /* Logo kokonaan pois pyynnöstä */
+    .logo-wrapper, 
+    .logo-image {
+        display: none !important; /* Poistaa logon ja sen kääreen näkyvistä */
     }
 
     .mobile-menu-toggle {
