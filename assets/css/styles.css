@@ -652,7 +652,7 @@ nav .container {
     
     /* Optional: parantaa luettavuutta tummalla taustalla */
     letter-spacing: 0.2px;
-    color:#e0e0e0; /* Tai "inherit" ottaa värin emoelementiltä*/
+    color:#e8e8e8; /* Tai "inherit" ottaa värin emoelementiltä*/
 }
 
 /* ------------------------------ */
