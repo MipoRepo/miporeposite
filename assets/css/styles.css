@@ -124,7 +124,7 @@ nav .container {
 /* Hero Section */
 /*-------------------------------*/
 .hero {
-    height: 75vh;
+    height: 65vh;
     width: 100vw;
     position: relative;
     overflow: hidden; 
@@ -165,7 +165,7 @@ nav .container {
     font-size: 4rem;
     margin-bottom: 20px;
     animation: fadeInUp 1.5s ease-out;
-    line-height: 1.1;
+    line-height: 1.4;
 }
 
 .hero-tagline {
@@ -173,6 +173,7 @@ nav .container {
     margin-bottom: 30px;
     animation: fadeInUp 1.5s ease-out 1.0s both;
 }
+
 /*-------------------------------*/
 /* Keyframes for Hero section */
 /*-------------------------------*/
@@ -298,7 +299,7 @@ nav .container {
     margin-bottom: 25px;
     font-size: 1.05rem;
     font: bold;
-    line-height: 1.7;
+    line-height: 1.6;
     /* Muutettu valkoiseksi, jotta se erottuu tummemmasta lasitaustasta */
     color: rgba(255, 255, 255, 0.9); 
 }
@@ -382,9 +383,50 @@ nav .container {
     color: white !important;
 }
 
+/*Skill-korttien listat*/
+    /* Lisää tämä CSS-tyylitiedostoosi tai <style> -osioon */
+
+.skill-list {
+    list-style: none; /* Poistaa oletuspallot */
+    padding-left: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    position: relative;
+    padding-left: 25px; /* Tilaa kustomoidulle ikonille/pallolle */
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: inherit; /* Perii värin skill-cardilta */
+}
+
+/* Luodaan tyylikäs kustomoitu luettelomerkki */
+.skill-list li::before {
+    content: "•"; /* Voit käyttää myös FontAwesome-ikonia jos käytössä */
+    position: absolute;
+    left: 0;
+    color: #ffffff; /* Säädä väri teemasi mukaan */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Tehdään vahvistetusta tekstistä (strong) hieman erottuvampi */
+.skill-list li strong {
+    color: #ffffff;
+    display: inline-block;
+    margin-right: 5px;
+}
+
 .text-block-skills p {
     margin-bottom: 16px;
     line-height: 1.6;
+}
+
+.skill-list-item {
+    margin-left: 8px;     /* Sisennyksen määrä vasemmalta */
+    
+    line-height: 1.0;      /* Hyvä luettavuus tekstille */
+    list-style-position: outside; /* Varmistaa, että teksti rivittyy oikein sisennyksen alle */
 }
 
 /* Oranssi heijastus (Vain Skill-kortille) */
@@ -417,6 +459,7 @@ nav .container {
     left: 150%;
 }
 
+
 /* Teksti heijastuksen päälle */
 .skill-card > * {
     position: relative;
@@ -429,7 +472,7 @@ nav .container {
     padding: 20px;
     margin-bottom: 25px;
     background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
-    min-height: 320px; /* skill korttien selitteen minikorkeus */
+    min-height: 355px; /* skill korttien selitteen minikorkeus */
 }
 
 /* Erillinen luokka, jos halutaan hieman korkeampi kortti (esim. selitteille) */
@@ -465,7 +508,7 @@ nav .container {
 .text-block {
     margin-bottom: 25px;
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.6;
     /* Muutettu valkoiseksi, jotta se erottuu tummemmasta lasitaustasta */
     color: rgba(255, 255, 255, 0.9); 
 }
@@ -493,8 +536,14 @@ nav .container {
 }
 
 /* ------------------------------ */
-/* Mermaid Flowchart Styling      */
+/* Studies used as experience Mermaid Flowchart Styling      */
 /* ------------------------------ */
+
+.studies {
+    background: linear-gradient(135deg, #ff9a56, #ff6b35);
+    color: white;
+    text-align: center;
+}
 
 /* Yleinen fonttikoko ja bold */
 .mermaid svg text {
@@ -584,17 +633,67 @@ nav .container {
     display: none !important;
 }
 
-
-
-
 /*-------------------------------*/
-/* LinkedIn Section */
+/* Final Statement Section */
 /*-------------------------------*/
-.studies {
-    background: linear-gradient(135deg, #ff9a56, #ff6b35);
+.final-statement {
+    text-align: left;
+    line-height: 1.6;
+    margin: 64px 64px 0 64px; /* Ylä, Oikea, Ala, Vasen */
+    font-size: 1.3rem;      /* Vastaa noin 17-18px, säädä tarvittaessa */
+    font-weight: 700;       /* Bold (700 on standardi lihavointi) */
+    
+    /* Optional: parantaa luettavuutta tummalla taustalla */
+    letter-spacing: 0.2px;
+    color:#e0e0e0; /* Tai "inherit" ottaa värin emoelementiltä*/
+}
+
+/* ------------------------------ */
+/* Cartoon image section (Mikko's change) */
+/* ------------------------------ */
+
+.cartoon-section {
+    
+    background: linear-gradient(145deg, #0f0f0f, #0f0f0f, #928d8a);
     color: white;
     text-align: center;
+    padding: 10px 20px;
 }
+.cartoon-title {
+    color: #e0e0e0; 
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center
+}
+.change-image {
+    width: 120%;
+    aspect-ratio: 2156 / 728;
+    margin: 20px auto; /* keskittää elementin sivusuunnassa */
+    background-image: url("../img/mikkos-change.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-radius: 12px;
+}
+
+
+.hobby-image {
+    width: 70%;
+    aspect-ratio: 3049 / 297;
+    margin: 5px auto; /* keskittää elementin sivusuunnassa */
+    background-image: url("../img/mikko-hobbies.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-radius: 12px;
+}
+
+
+
+
+/*-------------------------------*/
+/* Linkedin link Section */
+/*-------------------------------*/
 
 .linkedin-link {
     display: inline-flex;
@@ -621,7 +720,7 @@ nav .container {
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 50px;
+    gap: 60px;
 }
 
 .me-image {
@@ -823,7 +922,7 @@ footer img:hover {
 
     .hero-content h1 { 
         font-size: 1.8rem !important; 
-        line-height: 1.2;
+        line-height: 1.4;
         margin-bottom: 15px;
         text-align: left !important;
     }
