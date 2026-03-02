@@ -57,7 +57,7 @@
 
     /* 2. HERO-OSIO (Header kuva ja tekstit) */
     .hero {
-        height: 55vh !important; /* Madallettu mobiilille */
+        height: 50vh !important; /* Madallettu mobiilille */
         display: flex;
         align-items: center;
         justify-content: flex-start; /* Sisältö alkaa vasemmalta */
