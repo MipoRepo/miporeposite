@@ -670,10 +670,10 @@ nav .container {
     background: linear-gradient(145deg, #0f0f0f, #0f0f0f, #928d8a);
     color: white;
     text-align: center;
-    padding: 10px 20px;
+    padding: 30px 10px;
 }
 .cartoon-title {
-    color: #e0e0e0; 
+    color: #2b1818; 
     font-size: 2rem;
     margin-bottom: 40px;
     text-align: center
@@ -681,7 +681,7 @@ nav .container {
 .change-image {
     width: 120%;
     aspect-ratio: 2156 / 728;
-    margin: 20px auto; /* keskittää elementin sivusuunnassa */
+    margin: 10px auto; /* keskittää elementin sivusuunnassa */
     background-image: url("../img/mikkos-change.png");
     background-repeat: no-repeat;
     background-position: center center;
