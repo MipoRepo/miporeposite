@@ -478,7 +478,29 @@
                         
                     
                     </div><br>
-                    <!--<img src="assets/img/profiili-qr.svg" style="height: 120px; width: auto;">-->
+                    <section id="contact">
+                      <h2>Contact</h2>
+
+                      <canvas id="qr"></canvas>
+
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+                      <script>
+                        var vcard = "BEGIN:VCARD\n" +
+                                    "VERSION:3.0\n" +
+                                    "N:Mikko Pohjola\n" +
+                                    "FN:Mikko Pohjola\n" +
+                                    "TEL;TYPE=cell:+358414840582\n" +
+                                    "EMAIL:mikko.t.pohjola@gmail.com" +
+                                    "END:VCARD";
+                    
+                        var qr = new QRious({
+                          element: document.getElementById('qr'),
+                          value: vcard,
+                          size: 120
+                        });
+                      </script>
+                    </section>
+
                 </div>
                 <div class="contact-form">
                     <form id="contactForm" action="https://formspree.io/f/mqadkagr" method="POST">
