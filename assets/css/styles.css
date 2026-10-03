@@ -22,10 +22,23 @@ body {
     padding-left: 20px;
     margin: 20px 0;
     font-style: italic;
+    font-size: 1.0rem;
     color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 170px; 
 }
 
-
+.fancy-quote-2 {
+    border-left: 4px solid #ff6b35;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 1.0rem;
+    background: rgba(61, 60, 60, 0.1);
+    color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 210px; 
+}
 /*-------------------------------*/
 /* Navigation */
 /*-------------------------------*/
@@ -397,13 +410,14 @@ nav .container {
     list-style: none; /* Poistaa oletuspallot */
     padding-left: 0;
     margin: 0;
+    font-size: 0.8rem; /* Säädä fonttikokoa tarpeen mukaan */
 }
 
 .skill-list li {
     position: relative;
-    padding-left: 25px; /* Tilaa kustomoidulle ikonille/pallolle */
-    margin-bottom: 8px;
-    line-height: 1.6;
+    padding-left: 16px; /* Tilaa kustomoidulle ikonille/pallolle */
+    margin-bottom: 4px;
+    line-height: 1.4;
     color: inherit; /* Perii värin skill-cardilta */
 }
 
@@ -414,19 +428,19 @@ nav .container {
     left: 0;
     color: #ffffff; /* Säädä väri teemasi mukaan */
     font-weight: bold;
-    font-size: 1.2em;
+    
 }
 
 /* Tehdään vahvistetusta tekstistä (strong) hieman erottuvampi */
 .skill-list li strong {
     color: #ffffff;
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 2px;
 }
 
 .text-block-skills p {
     margin-bottom: 16px;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 .skill-list-item {
@@ -479,8 +493,10 @@ nav .container {
     padding: 20px;
     margin-bottom: 25px;
     background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
-    min-height: 355px; /* skill korttien selitteen minikorkeus */
+    min-height: 330px; /* skill korttien selitteen minikorkeus */
 }
+
+
 
 /* Erillinen luokka, jos halutaan hieman korkeampi kortti (esim. selitteille) */
 
@@ -491,6 +507,15 @@ nav .container {
     margin-bottom: 25px;
     background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
     min-height: 400px; /* skill korttien selitteen minikorkeus */
+}
+
+.framed-block-case-2 {
+    border: 1px solid rgba(255, 255, 255, 0.846); /* ohut vaalea kehys */
+    border-radius: 10px;                         /* pyöristetyt kulmat */
+    padding: 20px;
+    margin-bottom: 25px;
+    background: rgba(12, 12, 12, 0.23);       /* kevyt läpikuultava tausta */
+    min-height: 690px; /* skill korttien selitteen minikorkeus */
 }
 
 /* Rajoitetaan sarakkeet tasan kolmeen isoilla näytöillä */
@@ -514,15 +539,15 @@ nav .container {
 /* General text block styling */
 .text-block {
     margin-bottom: 25px;
-    font-size: 1.05rem;
+    font-size: 1.0rem;
     line-height: 1.6;
     /* Muutettu valkoiseksi, jotta se erottuu tummemmasta lasitaustasta */
     color: rgba(255, 255, 255, 0.9); 
 }
 
 .goal-title {
-    color: #333;
-    margin-bottom: 20px;
+    color: #333    margin-bottom: 20px;
+    F
 }
 
 .single-column-card {
@@ -548,7 +573,7 @@ nav .container {
 
 .studies {
     background: linear-gradient(135deg, #ff9a56, #ff6b35);
-    color: white;
+    color: rgb(78, 75, 75);
     text-align: center;
 }
 
@@ -577,7 +602,7 @@ nav .container {
     z-index: 999 !important;
     font-size: 0px !important;
     font-weight: 0 !important;
-    color: #ffffff !important;
+    color: #272525 !important;
     text-align: center;
 }
 
@@ -592,7 +617,7 @@ nav .container {
 
 .mermaid .node rect {
     fill: rgba(255, 255, 255, 0.15) !important;
-    stroke: #ffffff !important;
+    stroke: #302c2c !important;
     stroke-width: 2px !important;
     rx: 14px !important;
     ry: 14px !important;
@@ -667,7 +692,7 @@ nav .container {
 
 .cartoon-section {
     
-    background: linear-gradient(145deg, #0f0f0f, #0f0f0f, #928d8a);
+    background: rgb(196, 72, 14);
     color: white;
     text-align: center;
     padding: 30px 10px;
