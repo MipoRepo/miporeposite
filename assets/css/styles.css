@@ -568,12 +568,12 @@ nav .container {
 }
 
 /* ------------------------------ */
-/* Studies used as experience Mermaid Flowchart Styling      */
+/* Mermaid Flowchart Styling      */
 /* ------------------------------ */
 
 .studies {
     background: linear-gradient(135deg, #ff9a56, #ff6b35);
-    color: rgb(78, 75, 75);
+    color: #ff6b35
     text-align: center;
 }
 
@@ -581,7 +581,8 @@ nav .container {
 .mermaid svg text {
     font-size: 28px !important;
     font-weight: 700 !important;
-    fill: #ffffff !important;
+    color: #ff6b35 !important;
+    fill: #c0aeae !important;
 }
 
 /* ------------------------------ */
@@ -687,7 +688,7 @@ nav .container {
 
 
 /* ------------------------------ */
-/* Cartoon image section (Mikko's change) */
+/* Cartoon image section (Not in use) */
 /* ------------------------------ */
 
 .cartoon-section {
