@@ -766,7 +766,7 @@ nav .container {
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    background: url("../img/foto.jpeg") center/cover no-repeat;
+    background: url("../img/foto.jpg") center/cover no-repeat;
     margin-bottom: 25px;
 }
 
